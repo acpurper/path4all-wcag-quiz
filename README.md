@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# Diagnóstico de Acessibilidade WCAG 2.2 — Path4All
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Quiz interativo que ajuda equipes de produto a identificar critérios WCAG 2.2 aplicáveis ao sistema que estão construindo, na fase de especificação de requisitos.
 
-Currently, two official plugins are available:
+Aplicação prática do método **Path4All** (Personas + User Stories + BDD + WCAG), desenvolvido por Renata Vinadé em sua pesquisa de doutorado na PUCRS, sob orientação da Profa. Dra. Sabrina Marczak.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Como funciona
 
-## React Compiler
+O usuário responde a 13 perguntas sobre características do sistema (tem áudio? tem formulário? tem timeout?) e recebe um relatório com os critérios WCAG 2.2 aplicáveis, organizados por princípio POUR. O relatório permite marcar critérios como implementados, filtrar por público-alvo e exportar como PDF.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Acessibilidade
 
-## Expanding the ESLint configuration
+O próprio site é exemplo de acessibilidade. Auditado contra os 11 itens críticos definidos em `docs/auditoria-a11y.md` e validado automaticamente via axe-core (`npm run a11y`). Zero violations em todas as telas.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Vite + React + TypeScript + Tailwind CSS
+- Persistência via localStorage com fallback gracioso
+- Sem dependências de UI (React puro + Tailwind)
+- Deploy contínuo via Netlify
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Desenvolvimento
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # gera dist/
+npm run a11y      # auditoria axe-core (dev server precisa estar rodando)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Estrutura
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `data/wcag-mapping.json` — mapeamento WCAG 2.2 gerado a partir do XLSX da Renata
+- `docs/source/WCAG2_2_Mapeamentos.xlsx` — fonte original do mapeamento
+- `docs/auditoria-a11y.md` — relatório de auditoria de acessibilidade
+- `scripts/a11y.mjs` — script de auditoria automatizada
+- `src/screens/` — três telas (Intro, Quiz, Report)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Créditos
+
+Pesquisa de doutorado: **Renata Vinadé** (PUCRS)
+Orientação: **Profa. Dra. Sabrina Marczak** (PUCRS)
+Apoio: Bolsa Renata Vinadé
+Desenvolvimento: Ana Purper
