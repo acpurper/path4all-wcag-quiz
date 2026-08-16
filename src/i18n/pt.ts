@@ -14,6 +14,7 @@ export const pt = {
       `Pergunta ${n} de ${total}: ${pergunta}`,
     grupoRespostas: 'Escolha uma resposta',
     voltarAriaLabel: 'Voltar para a pergunta anterior',
+    seletorIdioma: 'Selecionar idioma',
   },
   intro: {
     heading: 'Diagnóstico de Acessibilidade WCAG 2.2',

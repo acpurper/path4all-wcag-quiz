@@ -1,5 +1,6 @@
 import type { State, Action } from '../types/wcag';
 import { categorias, TOTAL_QUESTIONS } from '../lib/wcag';
+import { detectLang } from '../i18n/detectLang';
 
 export const initialState: State = {
   screen: 'intro',
@@ -8,7 +9,7 @@ export const initialState: State = {
   implementado: {},
   publicosAtivos: [],
   startedAt: null,
-  lang: 'pt',
+  lang: detectLang(),
 };
 
 export function quizReducer(state: State, action: Action): State {

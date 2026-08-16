@@ -2,9 +2,8 @@ import { useReducer, useEffect, useCallback } from 'react';
 import type { State, Action } from '../types/wcag';
 import { quizReducer, initialState } from '../state/quizReducer';
 import { isLang } from '../i18n/index';
+import { detectLang, STORAGE_KEY } from '../i18n/detectLang';
 import { TOTAL_QUESTIONS } from '../lib/wcag';
-
-const STORAGE_KEY = 'wcag-quiz-state-v3';
 
 const VALID_SCREENS = new Set<string>(['intro', 'quiz', 'report']);
 const VALID_ANSWERS = new Set<string>(['sim', 'nao', 'nao_sei']);
@@ -46,14 +45,18 @@ function isValidState(raw: unknown): raw is State {
 }
 
 function loadFromStorage(): State {
+  // detectLang() resolves query param > persisted lang > navigator.language > 'pt',
+  // so it always wins over whatever lang happens to be in the parsed state below —
+  // a shared link's ?lang= must override a returning visitor's saved preference.
+  const lang = detectLang();
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return initialState;
+    if (!raw) return { ...initialState, lang };
     const parsed: unknown = JSON.parse(raw);
-    if (!isValidState(parsed)) return initialState;
-    return parsed;
+    if (!isValidState(parsed)) return { ...initialState, lang };
+    return { ...parsed, lang };
   } catch {
-    return initialState;
+    return { ...initialState, lang };
   }
 }
 

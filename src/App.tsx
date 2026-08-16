@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { usePersistedReducer } from './hooks/usePersistedReducer';
 import { SkipLink } from './components/SkipLink';
+import { LanguageToggle } from './components/LanguageToggle';
 import { IntroScreen } from './screens/IntroScreen';
 import { QuizScreen } from './screens/QuizScreen';
 import { ReportScreen } from './screens/ReportScreen';
@@ -35,9 +36,24 @@ function App() {
     if (metaDesc) metaDesc.setAttribute('content', t.meta.description);
   }, [t]);
 
+  // Critério 3.1.1 — o idioma do documento precisa refletir o idioma da UI.
+  useEffect(() => {
+    document.documentElement.lang = state.lang === 'pt' ? 'pt-BR' : 'en';
+  }, [state.lang]);
+
+  // Mantém o idioma no link (?lang=), sem poluir o histórico do botão voltar.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', state.lang);
+    window.history.replaceState({}, '', url);
+  }, [state.lang]);
+
   return (
     <>
       <SkipLink t={t} />
+      <header className="flex justify-end px-6 py-3">
+        <LanguageToggle t={t} lang={state.lang} dispatch={dispatch} />
+      </header>
       <main id="main" className="bg-[#FAFAF7] text-[#1A1A1A]">
         {state.screen === 'intro' && (
           <IntroScreen state={state} dispatch={dispatch} t={t} />
