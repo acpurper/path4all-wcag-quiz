@@ -2,7 +2,7 @@
 
 Quiz interativo que ajuda equipes de produto a identificar critérios WCAG 2.2 aplicáveis ao sistema que estão construindo, na fase de especificação de requisitos.
 
-Aplicação prática do método **Path4All** (Personas + User Stories + BDD + WCAG), desenvolvido por Renata Vinadé em sua pesquisa de doutorado na PUCRS, sob orientação da Profa. Dra. Sabrina Marczak.
+Aplicação prática do método **Path4All** (Personas + User Stories + BDD + WCAG) — ver [Créditos](#créditos) para autoria e orientação da pesquisa.
 
 ## Como funciona
 
@@ -38,7 +38,6 @@ npm run a11y      # auditoria axe-core (dev server precisa estar rodando)
 
 ## Créditos
 
-Pesquisa de doutorado: **Renata Vinadé** (PUCRS)
-Orientação: **Profa. Dra. Sabrina Marczak** (PUCRS)
-Apoio: Bolsa Renata Vinadé
-Desenvolvimento: Ana Purper
+Ferramenta desenvolvida por **Ana Purper**, bolsista de Iniciação Científica (PIBIC/CNPq), Escola Politécnica — PUCRS.
+
+Baseada no método **Path4All**, pesquisa de mestrado de **Renata Vinadé** (PUCRS), sob orientação da **Profa. Dra. Sabrina Marczak**.

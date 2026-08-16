@@ -68,13 +68,20 @@ export function IntroScreen({ t, state, dispatch }: Props) {
           )}
         </div>
 
-        <footer className="border-t border-[#1A1A1A]/10 pt-6">
+        <footer className="border-t border-[#1A1A1A]/10 pt-6 space-y-1">
           <p className="text-sm text-[#5C5C5C] leading-relaxed">
-            {t.intro.footerA}
-            <strong className="text-[#5C5C5C]">{t.intro.footerStrongA}</strong>
-            {t.intro.footerB}
-            <strong className="text-[#5C5C5C]">{t.intro.footerStrongB}</strong>
-            {t.intro.footerC}
+            {t.intro.footer1A}
+            <strong className="text-[#5C5C5C]">{t.intro.footer1Strong}</strong>
+            {t.intro.footer1B}
+          </p>
+          <p className="text-sm text-[#5C5C5C] leading-relaxed">
+            {t.intro.footer2A}
+            <strong className="text-[#5C5C5C]">{t.intro.footer2StrongA}</strong>
+            {t.intro.footer2B}
+            <strong className="text-[#5C5C5C]">{t.intro.footer2StrongB}</strong>
+            {t.intro.footer2C}
+            <strong className="text-[#5C5C5C]">{t.intro.footer2StrongC}</strong>
+            {t.intro.footer2D}
           </p>
         </footer>
       </div>

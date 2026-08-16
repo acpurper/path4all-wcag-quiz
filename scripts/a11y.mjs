@@ -1,7 +1,11 @@
+// TODO Fase 5: parametrizar seletores por locale e auditar pt + en.
 import { chromium } from 'playwright';
 import { AxeBuilder } from '@axe-core/playwright';
 
 const BASE = 'http://localhost:5173';
+// Playwright/Chromium roda com navigator.language em inglês; forçar ?lang=pt
+// mantém a auditoria determinística contra os seletores em português abaixo.
+const START_URL = `${BASE}/?lang=pt`;
 
 async function auditar(page, nome) {
   const { violations } = await new AxeBuilder({ page }).analyze();
@@ -25,9 +29,11 @@ const browser = await chromium.launch();
 const context = await browser.newContext();
 const page = await context.newPage();
 
-await page.goto(BASE);
+await page.goto(START_URL);
 await page.evaluate(() => localStorage.clear());
-await page.reload();
+// goto (não reload) para garantir que ?lang=pt permaneça na URL de forma
+// determinística, sem depender do momento em que o replaceState do app roda.
+await page.goto(START_URL);
 
 let total = 0;
 total += await auditar(page, 'IntroScreen');
