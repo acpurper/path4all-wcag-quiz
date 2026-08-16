@@ -8,6 +8,7 @@ export const initialState: State = {
   implementado: {},
   publicosAtivos: [],
   startedAt: null,
+  lang: 'pt',
 };
 
 export function quizReducer(state: State, action: Action): State {
@@ -70,6 +71,9 @@ export function quizReducer(state: State, action: Action): State {
 
     case 'CLEAR_PUBLICOS':
       return { ...state, publicosAtivos: [] };
+
+    case 'SET_LANG':
+      return { ...state, lang: action.lang };
 
     case 'RESTART':
       return { ...initialState };

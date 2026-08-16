@@ -1,12 +1,14 @@
 import type { State } from '../types/wcag';
+import type { Dict } from '../i18n/index';
 import { getResumeIndex } from '../state/quizReducer';
 
 interface Props {
+  t: Dict;
   state: State;
   dispatch: (action: import('../types/wcag').Action) => void;
 }
 
-export function IntroScreen({ state, dispatch }: Props) {
+export function IntroScreen({ t, state, dispatch }: Props) {
   const hasAnswers = Object.keys(state.answers).length > 0;
 
   function handleContinue() {
@@ -29,20 +31,15 @@ export function IntroScreen({ state, dispatch }: Props) {
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           className="text-4xl sm:text-5xl font-medium text-[#2D3F2D] mb-6 leading-tight"
         >
-          Diagnóstico de Acessibilidade WCAG 2.2
+          {t.intro.heading}
         </h1>
 
         <p className="text-base sm:text-lg text-[#1A1A1A] mb-4 leading-relaxed">
-          Esta ferramenta é destinada à <strong>fase de especificação de
-          requisitos</strong> — não à remediação de sistemas existentes.
-          Responda 13 perguntas sobre as características do sistema que
-          você planeja construir e receba um checklist personalizado com
-          os critérios WCAG 2.2 aplicáveis ao seu contexto.
+          {t.intro.p1a}<strong>{t.intro.p1Strong}</strong>{t.intro.p1b}
         </p>
 
         <p className="text-base sm:text-lg text-[#1A1A1A] mb-10 leading-relaxed">
-          O resultado segue o método <strong>Path4All</strong>, que prioriza
-          critérios por público-alvo e nível de conformidade (A, AA, AAA).
+          {t.intro.p2a}<strong>{t.intro.p2Strong}</strong>{t.intro.p2b}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -52,13 +49,13 @@ export function IntroScreen({ state, dispatch }: Props) {
                 onClick={handleContinue}
                 className="min-h-[44px] px-8 py-3 bg-[#2D3F2D] text-white rounded text-base font-medium hover:bg-[#3a5230] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-2 transition-colors duration-150"
               >
-                Continuar de onde parou
+                {t.intro.btnContinue}
               </button>
               <button
                 onClick={handleRestart}
                 className="min-h-[44px] px-8 py-3 border-2 border-[#2D3F2D] text-[#2D3F2D] rounded text-base font-medium hover:bg-[#2D3F2D]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-2 transition-colors duration-150"
               >
-                Começar do início
+                {t.intro.btnRestart}
               </button>
             </>
           ) : (
@@ -66,20 +63,18 @@ export function IntroScreen({ state, dispatch }: Props) {
               onClick={handleStart}
               className="min-h-[44px] px-8 py-3 bg-[#2D3F2D] text-white rounded text-base font-medium hover:bg-[#3a5230] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-2 transition-colors duration-150"
             >
-              Começar
+              {t.intro.btnStart}
             </button>
           )}
         </div>
 
         <footer className="border-t border-[#1A1A1A]/10 pt-6">
           <p className="text-sm text-[#5C5C5C] leading-relaxed">
-            Pesquisa de doutorado de{' '}
-            <strong className="text-[#5C5C5C]">Renata Vinadé</strong>,
-            PUCRS, orientação{' '}
-            <strong className="text-[#5C5C5C]">
-              Profa. Dra. Sabrina Marczak
-            </strong>
-            . Apoio Bolsa Renata Vinadé.
+            {t.intro.footerA}
+            <strong className="text-[#5C5C5C]">{t.intro.footerStrongA}</strong>
+            {t.intro.footerB}
+            <strong className="text-[#5C5C5C]">{t.intro.footerStrongB}</strong>
+            {t.intro.footerC}
           </p>
         </footer>
       </div>

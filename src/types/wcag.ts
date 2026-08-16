@@ -1,3 +1,7 @@
+// IDs de categoria, critério e público são chaves opacas de dados — nunca texto
+// de interface, nunca candidatos a tradução e nunca regerados a partir de nomes.
+import type { Lang } from '../i18n/index';
+
 export interface Criterio {
   id: string;
   nome: string;
@@ -31,6 +35,7 @@ export interface State {
   implementado: Record<string, boolean>;
   publicosAtivos: string[];
   startedAt: number | null;
+  lang: Lang;
 }
 
 export type Action =
@@ -42,4 +47,5 @@ export type Action =
   | { type: 'RESTART' }
   | { type: 'TOGGLE_IMPLEMENTADO'; criterioId: string }
   | { type: 'TOGGLE_PUBLICO'; publicoId: string }
-  | { type: 'CLEAR_PUBLICOS' };
+  | { type: 'CLEAR_PUBLICOS' }
+  | { type: 'SET_LANG'; lang: Lang };
