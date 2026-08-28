@@ -48,7 +48,7 @@ export const pt = {
     btnVoltar: 'Voltar',
   },
   report: {
-    heading: 'Relatório de critérios WCAG 2.2 aplicáveis',
+    heading: 'Critérios de sucesso WCAG 2.2 aplicáveis',
     statCategorias: 'Categorias aplicáveis',
     statObrigatorios: 'Obrigatórios',
     statRecomendaveis: 'Recomendáveis',
@@ -59,7 +59,7 @@ export const pt = {
     btnRecolher: 'Recolher todos os detalhes',
     fieldsetLegend: 'Filtrar por público-alvo (opcional)',
     fieldsetDesc:
-      'Selecione um ou mais públicos para destacar critérios especialmente relevantes. O destaque não esconde os demais critérios.',
+      'Selecione um ou mais públicos para destacar critérios de sucesso especialmente relevantes. O destaque não esconde os demais critérios.',
     btnLimparFiltros: 'Limpar filtros',
     relevantePara: (nomes: string) => `Relevante para: ${nomes}`,
     semMapeamento: 'Sem mapeamento específico de público no estudo.',

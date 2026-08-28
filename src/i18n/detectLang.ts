@@ -1,6 +1,5 @@
 import { isLang, type Lang } from './index';
-
-export const STORAGE_KEY = 'wcag-quiz-state-v3';
+import { STORAGE_KEY } from '../lib/storage-key';
 
 function readStoredLang(): Lang | null {
   try {

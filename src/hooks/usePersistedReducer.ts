@@ -2,8 +2,9 @@ import { useReducer, useEffect, useCallback } from 'react';
 import type { State, Action } from '../types/wcag';
 import { quizReducer, initialState } from '../state/quizReducer';
 import { isLang } from '../i18n/index';
-import { detectLang, STORAGE_KEY } from '../i18n/detectLang';
+import { detectLang } from '../i18n/detectLang';
 import { TOTAL_QUESTIONS } from '../lib/wcag';
+import { STORAGE_KEY } from '../lib/storage-key';
 
 const VALID_SCREENS = new Set<string>(['intro', 'quiz', 'report']);
 const VALID_ANSWERS = new Set<string>(['sim', 'nao', 'nao_sei']);
