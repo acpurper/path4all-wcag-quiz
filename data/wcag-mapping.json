@@ -2,16 +2,31 @@
   "categorias": [
     {
       "id": "imagens-icones-graficos",
-      "nome": "Imagens, ícones, gráficos",
-      "principio": "Perceptível",
-      "pergunta": "Há elementos não textuais na interface?",
+      "nome": {
+        "pt": "Imagens, ícones, gráficos",
+        "en": "Images, icons, graphics"
+      },
+      "principio": {
+        "pt": "Perceptível",
+        "en": "Perceivable"
+      },
+      "pergunta": {
+        "pt": "Há elementos não textuais na interface?",
+        "en": "Does the interface have non-text elements?"
+      },
       "criterios": [
         {
           "id": "1.1.1",
           "nome": "Non-text Content",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Fornecer texto alternativo significativo para imagens informativas; usar alt=\"\" ou role=presentation para decorativas.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Fornecer texto alternativo significativo para imagens informativas; usar alt=\"\" ou role=presentation para decorativas.",
+            "en": "Provide meaningful alternative text for informative images; use alt=\"\" or role=\"presentation\" for decorative ones."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -25,16 +40,31 @@
     },
     {
       "id": "audio-video-midia-temporal",
-      "nome": "Áudio, vídeo, mídia temporal",
-      "principio": "Perceptível",
-      "pergunta": "O sistema terá áudio ou vídeo?",
+      "nome": {
+        "pt": "Áudio, vídeo, mídia temporal",
+        "en": "Audio, video, time-based media"
+      },
+      "principio": {
+        "pt": "Perceptível",
+        "en": "Perceivable"
+      },
+      "pergunta": {
+        "pt": "O sistema terá áudio ou vídeo?",
+        "en": "Will the system have audio or video?"
+      },
       "criterios": [
         {
           "id": "1.2.1",
           "nome": "Audio-only and Video-only (Prerecorded)",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Para áudio pré-gravado: disponibilizar transcrição; para vídeo sem áudio: alternativa equivalente em texto.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Para áudio pré-gravado: disponibilizar transcrição; para vídeo sem áudio: alternativa equivalente em texto.",
+            "en": "For prerecorded audio: provide a transcript; for video-only content: provide an equivalent text alternative."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -48,8 +78,14 @@
           "id": "1.2.2",
           "nome": "Captions (Prerecorded)",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Fornecer legendas sincronizadas para todo vídeo pré-gravado com áudio.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Fornecer legendas sincronizadas para todo vídeo pré-gravado com áudio.",
+            "en": "Provide synchronized captions for all prerecorded video with audio."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html",
           "publicos_atendidos": [
             "sem_audicao",
@@ -61,8 +97,14 @@
           "id": "1.2.3",
           "nome": "Audio Description or Media Alternative (Prerecorded)",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Para vídeos, fornecer audiodescrição ou alternativa em texto descrevendo as informações visuais relevantes.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Para vídeos, fornecer audiodescrição ou alternativa em texto descrevendo as informações visuais relevantes.",
+            "en": "For videos, provide audio description or a text alternative describing the relevant visual information."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -74,8 +116,14 @@
           "id": "1.2.4",
           "nome": "Captions (Live)",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Fornecer legendas em tempo real para transmissões ao vivo com áudio.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Fornecer legendas em tempo real para transmissões ao vivo com áudio.",
+            "en": "Provide real-time captions for live audio broadcasts."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/captions-live.html",
           "publicos_atendidos": [
             "sem_audicao",
@@ -87,8 +135,14 @@
           "id": "1.2.5",
           "nome": "Audio Description (Prerecorded)",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Incluir faixa de audiodescrição para vídeos com informações visuais essenciais.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Incluir faixa de audiodescrição para vídeos com informações visuais essenciais.",
+            "en": "Include an audio description track for videos with essential visual information."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -100,8 +154,14 @@
           "id": "1.2.6",
           "nome": "Sign Language (Prerecorded)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Atender ao critério 1.2.6 — Sign Language (Prerecorded) — conforme diretrizes WCAG e normas correlatas.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Atender ao critério 1.2.6 — Sign Language (Prerecorded) — conforme diretrizes WCAG e normas correlatas.",
+            "en": "Meet criterion 1.2.6 — Sign Language (Prerecorded) — per WCAG guidelines and related standards."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/sign-language-prerecorded.html",
           "publicos_atendidos": []
         },
@@ -109,8 +169,14 @@
           "id": "1.2.7",
           "nome": "Extended Audio Description (Prerecorded)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Atender ao critério 1.2.7 — Extended Audio Description (Prerecorded) — conforme diretrizes WCAG e normas correlatas.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Atender ao critério 1.2.7 — Extended Audio Description (Prerecorded) — conforme diretrizes WCAG e normas correlatas.",
+            "en": "Meet criterion 1.2.7 — Extended Audio Description (Prerecorded) — per WCAG guidelines and related standards."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/extended-audio-description-prerecorded.html",
           "publicos_atendidos": []
         },
@@ -118,8 +184,14 @@
           "id": "1.2.8",
           "nome": "Media Alternative (Prerecorded)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Atender ao critério 1.2.8 — Media Alternative (Prerecorded) — conforme diretrizes WCAG e normas correlatas.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Atender ao critério 1.2.8 — Media Alternative (Prerecorded) — conforme diretrizes WCAG e normas correlatas.",
+            "en": "Meet criterion 1.2.8 — Media Alternative (Prerecorded) — per WCAG guidelines and related standards."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/media-alternative-prerecorded.html",
           "publicos_atendidos": []
         },
@@ -127,8 +199,14 @@
           "id": "1.2.9",
           "nome": "Audio-only (Live)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Atender ao critério 1.2.9 — Audio-only (Live) — conforme diretrizes WCAG e normas correlatas.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Atender ao critério 1.2.9 — Audio-only (Live) — conforme diretrizes WCAG e normas correlatas.",
+            "en": "Meet criterion 1.2.9 — Audio-only (Live) — per WCAG guidelines and related standards."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/audio-only-live.html",
           "publicos_atendidos": []
         }
@@ -136,16 +214,31 @@
     },
     {
       "id": "estrutura-layout-semantica",
-      "nome": "Estrutura, layout, semântica",
-      "principio": "Perceptível",
-      "pergunta": "A interface usa cabeçalhos, tabelas ou estrutura semântica?",
+      "nome": {
+        "pt": "Estrutura, layout, semântica",
+        "en": "Structure, layout, semantics"
+      },
+      "principio": {
+        "pt": "Perceptível",
+        "en": "Perceivable"
+      },
+      "pergunta": {
+        "pt": "A interface usa cabeçalhos, tabelas ou estrutura semântica?",
+        "en": "Does the interface use headings, tables, or semantic structure?"
+      },
       "criterios": [
         {
           "id": "1.3.1",
           "nome": "Info and Relationships",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Usar marcação semântica (headings H1–H6, listas, <th>/<td>, <label>); não estilizar sem semântica equivalente.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Usar marcação semântica (headings H1–H6, listas, <th>/<td>, <label>); não estilizar sem semântica equivalente.",
+            "en": "Use semantic markup (H1–H6 headings, lists, <th>/<td>, <label>); do not style elements without equivalent semantics."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -157,8 +250,14 @@
           "id": "1.3.2",
           "nome": "Meaningful Sequence",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Garantir que a ordem DOM e a ordem de leitura pelo teclado reflitam a ordem visual prevista.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Garantir que a ordem DOM e a ordem de leitura pelo teclado reflitam a ordem visual prevista.",
+            "en": "Ensure the DOM order and keyboard reading order reflect the intended visual order."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -170,8 +269,14 @@
           "id": "1.3.3",
           "nome": "Sensory Characteristics",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Não depender exclusivamente de forma/cor/posição; incluir rótulos e instruções explícitas.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Não depender exclusivamente de forma/cor/posição; incluir rótulos e instruções explícitas.",
+            "en": "Do not rely solely on shape, color, or position; include explicit labels and instructions."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -185,8 +290,14 @@
           "id": "1.3.4",
           "nome": "Orientation",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Permitir rotação (portrait/landscape) sem perda de conteúdo ou funcionalidade.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Permitir rotação (portrait/landscape) sem perda de conteúdo ou funcionalidade.",
+            "en": "Support both orientations (portrait/landscape) without loss of content or functionality."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/orientation.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
@@ -197,8 +308,14 @@
           "id": "1.3.5",
           "nome": "Identify Input Purpose",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Identificar a finalidade de campos de entrada (autocomplete, propósito semântico) quando aplicável.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Identificar a finalidade de campos de entrada (autocomplete, propósito semântico) quando aplicável.",
+            "en": "Identify the purpose of input fields (autocomplete, semantic purpose) when applicable."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -210,8 +327,14 @@
           "id": "1.3.6",
           "nome": "Identify Purpose",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Identificar finalidade de regiões/controles para personalização assistiva.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Identificar finalidade de regiões/controles para personalização assistiva.",
+            "en": "Identify the purpose of regions and controls to support assistive personalization."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/identify-purpose.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -223,16 +346,31 @@
     },
     {
       "id": "texto-cores-contraste",
-      "nome": "Texto, cores, contraste",
-      "principio": "Perceptível",
-      "pergunta": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "nome": {
+        "pt": "Texto, cores, contraste",
+        "en": "Text, color, contrast"
+      },
+      "principio": {
+        "pt": "Perceptível",
+        "en": "Perceivable"
+      },
+      "pergunta": {
+        "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+        "en": "Does the system display text, color, or relevant graphics?"
+      },
       "criterios": [
         {
           "id": "1.4.1",
           "nome": "Use of Color",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Não transmitir informação apenas por cor; incluir ícones/labels para reforço.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Não transmitir informação apenas por cor; incluir ícones/labels para reforço.",
+            "en": "Do not convey information by color alone; include icons or labels for reinforcement."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -245,8 +383,14 @@
           "id": "1.4.2",
           "nome": "Audio Control",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Disponibilizar controle para pausar/parar áudio que inicia automaticamente e dura >3s.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Disponibilizar controle para pausar/parar áudio que inicia automaticamente e dura >3s.",
+            "en": "Provide a control to pause or stop audio that starts automatically and lasts more than 3 seconds."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -258,8 +402,14 @@
           "id": "1.4.3",
           "nome": "Contrast (Minimum)",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Garantir contraste mínimo de 4.5:1 (ou 3:1 para texto grande e UI desabilitada).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Garantir contraste mínimo de 4.5:1 (ou 3:1 para texto grande e UI desabilitada).",
+            "en": "Ensure a minimum contrast ratio of 4.5:1 (or 3:1 for large text and disabled UI elements)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
           "publicos_atendidos": [
             "visao_limitada",
@@ -270,8 +420,14 @@
           "id": "1.4.4",
           "nome": "Resize Text",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Permitir aumento do texto até 200% sem perda de conteúdo/funcionalidade.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Permitir aumento do texto até 200% sem perda de conteúdo/funcionalidade.",
+            "en": "Allow text to be resized up to 200% without loss of content or functionality."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
           "publicos_atendidos": [
             "visao_limitada"
@@ -281,8 +437,14 @@
           "id": "1.4.5",
           "nome": "Images of Text",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Evitar imagens de texto; quando necessário, fornecer controle equivalente em texto.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Evitar imagens de texto; quando necessário, fornecer controle equivalente em texto.",
+            "en": "Avoid images of text; when necessary, provide an equivalent text-based control."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html",
           "publicos_atendidos": [
             "visao_limitada",
@@ -293,8 +455,14 @@
           "id": "1.4.6",
           "nome": "Contrast (Enhanced)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Fornecer contraste aprimorado (7:1 para texto normal; 4.5:1 para texto grande).",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Fornecer contraste aprimorado (7:1 para texto normal; 4.5:1 para texto grande).",
+            "en": "Provide enhanced contrast (7:1 for normal text; 4.5:1 for large text)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html",
           "publicos_atendidos": []
         },
@@ -302,8 +470,14 @@
           "id": "1.4.7",
           "nome": "Low or No Background Audio",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Fornecer áudio de fundo baixo/sem áudio para facilitar a audição do conteúdo principal.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Fornecer áudio de fundo baixo/sem áudio para facilitar a audição do conteúdo principal.",
+            "en": "Provide low or no background audio to make the primary audio content easier to hear."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/low-or-no-background-audio.html",
           "publicos_atendidos": []
         },
@@ -311,8 +485,14 @@
           "id": "1.4.8",
           "nome": "Visual Presentation",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Oferecer controle de largura de linha, espaçamento e justificação para leitura.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Oferecer controle de largura de linha, espaçamento e justificação para leitura.",
+            "en": "Offer control over line width, spacing, and justification to support reading."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation.html",
           "publicos_atendidos": []
         },
@@ -320,8 +500,14 @@
           "id": "1.4.9",
           "nome": "Images of Text (No Exception)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Evitar totalmente imagens de texto, exceto logotipos.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Evitar totalmente imagens de texto, exceto logotipos.",
+            "en": "Avoid images of text entirely, except for logotypes."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception.html",
           "publicos_atendidos": []
         },
@@ -329,8 +515,14 @@
           "id": "1.4.10",
           "nome": "Reflow",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Permitir reflow (uma coluna) até 320 CSS px sem scroll bidirecional.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Permitir reflow (uma coluna) até 320 CSS px sem scroll bidirecional.",
+            "en": "Support reflow to a single column at 320 CSS px without two-dimensional scrolling."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
           "publicos_atendidos": [
             "visao_limitada"
@@ -340,8 +532,14 @@
           "id": "1.4.11",
           "nome": "Non-text Contrast",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Garantir contraste ≥3:1 para componentes não textuais (ícones, bordas, foco).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Garantir contraste ≥3:1 para componentes não textuais (ícones, bordas, foco).",
+            "en": "Ensure a contrast ratio of at least 3:1 for non-text components (icons, borders, focus indicators)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
           "publicos_atendidos": [
             "visao_limitada",
@@ -352,8 +550,14 @@
           "id": "1.4.12",
           "nome": "Text Spacing",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Não quebrar conteúdo quando o usuário ajusta espaçamento (linha, parágrafo, palavra, caractere).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Não quebrar conteúdo quando o usuário ajusta espaçamento (linha, parágrafo, palavra, caractere).",
+            "en": "Do not break content when the user adjusts spacing (line, paragraph, word, or letter spacing)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
           "publicos_atendidos": [
             "visao_limitada",
@@ -364,8 +568,14 @@
           "id": "1.4.13",
           "nome": "Content on Hover or Focus",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Em hover/focus, o conteúdo adicional deve ser dispensável, persistente e focável.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Em hover/focus, o conteúdo adicional deve ser dispensável, persistente e focável.",
+            "en": "On hover or focus, additional content must be dismissible, persistent, and focusable."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -378,16 +588,31 @@
     },
     {
       "id": "teclado-navegacao",
-      "nome": "Teclado, navegação",
-      "principio": "Operável",
-      "pergunta": "O sistema pode ser usado apenas com teclado?",
+      "nome": {
+        "pt": "Teclado, navegação",
+        "en": "Keyboard, navigation"
+      },
+      "principio": {
+        "pt": "Operável",
+        "en": "Operable"
+      },
+      "pergunta": {
+        "pt": "O sistema pode ser usado apenas com teclado?",
+        "en": "Can the system be used with the keyboard alone?"
+      },
       "criterios": [
         {
           "id": "2.1.1",
           "nome": "Keyboard",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Todas as funcionalidades operáveis por teclado; sem dependência exclusiva de mouse/toque.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Todas as funcionalidades operáveis por teclado; sem dependência exclusiva de mouse/toque.",
+            "en": "All functionality must be operable via keyboard; do not rely exclusively on mouse or touch input."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -400,8 +625,14 @@
           "id": "2.1.2",
           "nome": "No Keyboard Trap",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Evitar armadilhas de teclado; permitir sair de componentes via métodos padrão (ex.: Esc).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Evitar armadilhas de teclado; permitir sair de componentes via métodos padrão (ex.: Esc).",
+            "en": "Avoid keyboard traps; allow the user to exit components using standard methods (e.g., Esc)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -413,8 +644,14 @@
           "id": "2.1.3",
           "nome": "Keyboard (No Exception)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Garantir operação completa por teclado sem exceções.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Garantir operação completa por teclado sem exceções.",
+            "en": "Ensure full keyboard operability with no exceptions."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard-no-exception.html",
           "publicos_atendidos": []
         },
@@ -422,8 +659,14 @@
           "id": "2.1.4",
           "nome": "Character Key Shortcuts",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Disponibilizar desligamento ou alteração de atalhos de tecla única; escopo por foco.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Disponibilizar desligamento ou alteração de atalhos de tecla única; escopo por foco.",
+            "en": "Provide a way to turn off or remap single-key shortcuts; scope them to the component with focus."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html",
           "publicos_atendidos": [
             "sem_visao"
@@ -433,16 +676,31 @@
     },
     {
       "id": "tempo-sessoes-temporizadas",
-      "nome": "Tempo, sessões temporizadas",
-      "principio": "Operável",
-      "pergunta": "Há tempo limite ou timeout no sistema?",
+      "nome": {
+        "pt": "Tempo, sessões temporizadas",
+        "en": "Time, timed sessions"
+      },
+      "principio": {
+        "pt": "Operável",
+        "en": "Operable"
+      },
+      "pergunta": {
+        "pt": "Há tempo limite ou timeout no sistema?",
+        "en": "Does the system have a time limit or timeout?"
+      },
       "criterios": [
         {
           "id": "2.2.1",
           "nome": "Timing Adjustable",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Oferecer opção de desativar, ajustar ou estender limites de tempo.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Oferecer opção de desativar, ajustar ou estender limites de tempo.",
+            "en": "Offer an option to turn off, adjust, or extend time limits."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -455,8 +713,14 @@
           "id": "2.2.2",
           "nome": "Pause, Stop, Hide",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Oferecer pausar/parar/ocultar para movimento/atualização que distrai ou interfere.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Oferecer pausar/parar/ocultar para movimento/atualização que distrai ou interfere.",
+            "en": "Offer a way to pause, stop, or hide moving or updating content that is distracting or interferes with use."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
           "publicos_atendidos": [
             "cognitivo_limitado"
@@ -466,8 +730,14 @@
           "id": "2.2.3",
           "nome": "No Timing",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Não exigir tempo para leitura/operação, salvo essencial.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Não exigir tempo para leitura/operação, salvo essencial.",
+            "en": "Do not impose a time limit on reading or operation unless it is essential."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/no-timing.html",
           "publicos_atendidos": []
         },
@@ -475,8 +745,14 @@
           "id": "2.2.4",
           "nome": "Interruptions",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Permitir adiar e controlar interrupções (ex.: notificações).",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Permitir adiar e controlar interrupções (ex.: notificações).",
+            "en": "Allow the user to postpone and control interruptions (e.g., notifications)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/interruptions.html",
           "publicos_atendidos": []
         },
@@ -484,8 +760,14 @@
           "id": "2.2.5",
           "nome": "Re-authenticating",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Manter dados ao reautenticar para evitar perda de informação.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Manter dados ao reautenticar para evitar perda de informação.",
+            "en": "Preserve entered data when re-authenticating to avoid loss of information."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/re-authenticating.html",
           "publicos_atendidos": []
         },
@@ -493,8 +775,14 @@
           "id": "2.2.6",
           "nome": "Timeouts",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Informar timeouts que possam causar perda de dados; fornecer alerta e preservação.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Informar timeouts que possam causar perda de dados; fornecer alerta e preservação.",
+            "en": "Warn about timeouts that could cause data loss; provide an alert and preserve the data."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/timeouts.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
@@ -505,16 +793,31 @@
     },
     {
       "id": "animacoes-flashes",
-      "nome": "Animações, flashes",
-      "principio": "Operável",
-      "pergunta": "O sistema terá animações, movimento ou flashes?",
+      "nome": {
+        "pt": "Animações, flashes",
+        "en": "Animations, flashing"
+      },
+      "principio": {
+        "pt": "Operável",
+        "en": "Operable"
+      },
+      "pergunta": {
+        "pt": "O sistema terá animações, movimento ou flashes?",
+        "en": "Will the system have animations, motion, or flashing?"
+      },
       "criterios": [
         {
           "id": "2.3.1",
           "nome": "Three Flashes or Below Threshold",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Evitar conteúdo com mais de três flashes por segundo ou abaixo do limiar seguro.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Evitar conteúdo com mais de três flashes por segundo ou abaixo do limiar seguro.",
+            "en": "Avoid content with more than three flashes per second, or below the safe threshold."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
           "publicos_atendidos": []
         },
@@ -522,8 +825,14 @@
           "id": "2.3.2",
           "nome": "Three Flashes",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Não haver flashes que possam provocar convulsões, mesmo abaixo do limiar.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Não haver flashes que possam provocar convulsões, mesmo abaixo do limiar.",
+            "en": "There must be no flashing capable of triggering seizures, even below the general threshold."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes.html",
           "publicos_atendidos": []
         },
@@ -531,8 +840,14 @@
           "id": "2.3.3",
           "nome": "Animation from Interactions",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Oferecer opção de reduzir/evitar animações desencadeadas por interação.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Oferecer opção de reduzir/evitar animações desencadeadas por interação.",
+            "en": "Offer an option to reduce or avoid animations triggered by interaction."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
           "publicos_atendidos": [
             "cognitivo_limitado"
@@ -542,16 +857,31 @@
     },
     {
       "id": "navegacao-foco",
-      "nome": "Navegação, foco",
-      "principio": "Operável",
-      "pergunta": "A interface possui múltiplas páginas ou navegação?",
+      "nome": {
+        "pt": "Navegação, foco",
+        "en": "Navigation, focus"
+      },
+      "principio": {
+        "pt": "Operável",
+        "en": "Operable"
+      },
+      "pergunta": {
+        "pt": "A interface possui múltiplas páginas ou navegação?",
+        "en": "Does the interface have multiple pages or navigation?"
+      },
       "criterios": [
         {
           "id": "2.4.1",
           "nome": "Bypass Blocks",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Fornecer mecanismo de pular blocos repetitivos (ex.: link “Ir para conteúdo”).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Fornecer mecanismo de pular blocos repetitivos (ex.: link “Ir para conteúdo”).",
+            "en": "Provide a mechanism to skip repeated blocks of content (e.g., a \"Skip to content\" link)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -564,8 +894,14 @@
           "id": "2.4.2",
           "nome": "Page Titled",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Definir título de página que descreva o tópico ou propósito.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Definir título de página que descreva o tópico ou propósito.",
+            "en": "Define a page title that describes the topic or purpose."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -578,8 +914,14 @@
           "id": "2.4.3",
           "nome": "Focus Order",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Garantir ordem de foco que preserva significado e operabilidade.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Garantir ordem de foco que preserva significado e operabilidade.",
+            "en": "Ensure a focus order that preserves meaning and operability."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -592,8 +934,14 @@
           "id": "2.4.4",
           "nome": "Link Purpose (In Context)",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Links descrevem propósito a partir do contexto imediato.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Links descrevem propósito a partir do contexto imediato.",
+            "en": "Links describe their purpose from the immediate surrounding context."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -606,8 +954,14 @@
           "id": "2.4.5",
           "nome": "Multiple Ways",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Disponibilizar múltiplas maneiras de localizar páginas (menu, busca, mapa do site).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Disponibilizar múltiplas maneiras de localizar páginas (menu, busca, mapa do site).",
+            "en": "Provide multiple ways to locate pages (menu, search, site map)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -620,8 +974,14 @@
           "id": "2.4.6",
           "nome": "Headings and Labels",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Usar headings e labels descritivos e consistentes.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Usar headings e labels descritivos e consistentes.",
+            "en": "Use descriptive, consistent headings and labels."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -634,8 +994,14 @@
           "id": "2.4.7",
           "nome": "Focus Visible",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Indicar foco visível nos elementos interativos.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Indicar foco visível nos elementos interativos.",
+            "en": "Provide a visible focus indicator on interactive elements."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html",
           "publicos_atendidos": [
             "visao_limitada",
@@ -647,8 +1013,14 @@
           "id": "2.4.8",
           "nome": "Location",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Exibir localização do usuário no site (ex.: trilha de navegação).",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Exibir localização do usuário no site (ex.: trilha de navegação).",
+            "en": "Show the user's location within the site (e.g., a breadcrumb trail)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/location.html",
           "publicos_atendidos": []
         },
@@ -656,8 +1028,14 @@
           "id": "2.4.9",
           "nome": "Link Purpose (Link Only)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "O texto do link sozinho descreve o destino do link.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "O texto do link sozinho descreve o destino do link.",
+            "en": "The link text alone describes the link's destination."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html",
           "publicos_atendidos": []
         },
@@ -665,8 +1043,14 @@
           "id": "2.4.10",
           "nome": "Section Headings",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Fornecer headings de seção para organizar conteúdo extenso.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Fornecer headings de seção para organizar conteúdo extenso.",
+            "en": "Provide section headings to organize lengthy content."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/section-headings.html",
           "publicos_atendidos": []
         },
@@ -674,8 +1058,14 @@
           "id": "2.4.11",
           "nome": "Focus Not Obscured (Minimum)",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Quando o foco aparece, ele não pode ser obscurecido além do mínimo permitido.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Quando o foco aparece, ele não pode ser obscurecido além do mínimo permitido.",
+            "en": "When focus appears, it must not be obscured beyond the minimum allowed."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -686,8 +1076,14 @@
           "id": "2.4.12",
           "nome": "Focus Not Obscured (Enhanced)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "O foco não deve ser obscurecido; garantir visibilidade completa do indicador.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "O foco não deve ser obscurecido; garantir visibilidade completa do indicador.",
+            "en": "Focus must not be obscured; ensure the indicator is fully visible."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -698,8 +1094,14 @@
           "id": "2.4.13",
           "nome": "Focus Appearance",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Aparência do foco atende tamanho/contraste mínimos definidos pela norma.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Aparência do foco atende tamanho/contraste mínimos definidos pela norma.",
+            "en": "The focus appearance meets the minimum size and contrast defined by the standard."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html",
           "publicos_atendidos": [
             "visao_limitada"
@@ -709,16 +1111,31 @@
     },
     {
       "id": "gestos-toques-entradas-alternativas",
-      "nome": "Gestos, toques, entradas alternativas",
-      "principio": "Operável",
-      "pergunta": "O sistema depende de gestos, arrastar ou entradas especiais?",
+      "nome": {
+        "pt": "Gestos, toques, entradas alternativas",
+        "en": "Gestures, touch, alternative input"
+      },
+      "principio": {
+        "pt": "Operável",
+        "en": "Operable"
+      },
+      "pergunta": {
+        "pt": "O sistema depende de gestos, arrastar ou entradas especiais?",
+        "en": "Does the system rely on gestures, dragging, or special input methods?"
+      },
       "criterios": [
         {
           "id": "2.5.1",
           "nome": "Pointer Gestures",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Oferecer alternativa simples a gestos multiponto/caminho (ex.: um toque).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Oferecer alternativa simples a gestos multiponto/caminho (ex.: um toque).",
+            "en": "Offer a simple alternative to multipoint or path-based gestures (e.g., a single tap)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
@@ -729,8 +1146,14 @@
           "id": "2.5.2",
           "nome": "Pointer Cancellation",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Evitar ativações acidentais (ex.: acionar na ‘up-event’ e fornecer cancelamento).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Evitar ativações acidentais (ex.: acionar na ‘up-event’ e fornecer cancelamento).",
+            "en": "Avoid accidental activation (e.g., trigger on the up-event and provide a way to cancel)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
@@ -741,8 +1164,14 @@
           "id": "2.5.3",
           "nome": "Label in Name",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "O nome acessível deve conter o rótulo visível (Label in Name).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "O nome acessível deve conter o rótulo visível (Label in Name).",
+            "en": "The accessible name must include the visible label (Label in Name)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -754,8 +1183,14 @@
           "id": "2.5.4",
           "nome": "Motion Actuation",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Permitir desativar controle por movimento ou fornecer alternativa.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Permitir desativar controle por movimento ou fornecer alternativa.",
+            "en": "Allow motion-based control to be turned off or provide an alternative."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
@@ -767,8 +1202,14 @@
           "id": "2.5.5",
           "nome": "Target Size",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Tamanho do alvo grande (AAA) para acionamento por toque.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Tamanho do alvo grande (AAA) para acionamento por toque.",
+            "en": "Provide a large target size (AAA) for touch activation."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/target-size.html",
           "publicos_atendidos": [
             "visao_limitada",
@@ -780,8 +1221,14 @@
           "id": "2.5.6",
           "nome": "Concurrent Input Mechanisms",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Permitir múltiplos métodos de entrada em paralelo (teclado, toque, caneta).",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Permitir múltiplos métodos de entrada em paralelo (teclado, toque, caneta).",
+            "en": "Support multiple input methods in parallel (keyboard, touch, stylus)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/concurrent-input-mechanisms.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
@@ -792,8 +1239,14 @@
           "id": "2.5.7",
           "nome": "Dragging Movements",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Fornecer alternativa ao arrastar (ex.: botões +/−) para mesma função.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Fornecer alternativa ao arrastar (ex.: botões +/−) para mesma função.",
+            "en": "Provide an alternative to dragging (e.g., +/− buttons) for the same function."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
@@ -804,8 +1257,14 @@
           "id": "2.5.8",
           "nome": "Target Size (Minimum)",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Garantir tamanho mínimo de alvo conforme a norma (ex.: 24×24 CSS px).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Garantir tamanho mínimo de alvo conforme a norma (ex.: 24×24 CSS px).",
+            "en": "Ensure a minimum target size as defined by the standard (e.g., 24×24 CSS px)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
           "publicos_atendidos": [
             "visao_limitada",
@@ -817,16 +1276,31 @@
     },
     {
       "id": "idioma-e-leitura",
-      "nome": "Idioma e leitura",
-      "principio": "Compreensível",
-      "pergunta": "A interface terá múltiplos idiomas ou texto extenso?",
+      "nome": {
+        "pt": "Idioma e leitura",
+        "en": "Language and reading"
+      },
+      "principio": {
+        "pt": "Compreensível",
+        "en": "Understandable"
+      },
+      "pergunta": {
+        "pt": "A interface terá múltiplos idiomas ou texto extenso?",
+        "en": "Will the interface have multiple languages or extensive text?"
+      },
       "criterios": [
         {
           "id": "3.1.1",
           "nome": "Language of Page",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Definir corretamente o idioma da página (lang).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Definir corretamente o idioma da página (lang).",
+            "en": "Correctly set the page language (lang attribute)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -840,8 +1314,14 @@
           "id": "3.1.2",
           "nome": "Language of Parts",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Indicar mudanças de idioma em trechos com atributo lang.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Indicar mudanças de idioma em trechos com atributo lang.",
+            "en": "Mark language changes in passages using the lang attribute."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -855,8 +1335,14 @@
           "id": "3.1.3",
           "nome": "Unusual Words",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Fornecer definições para palavras incomuns/idiomatismos.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Fornecer definições para palavras incomuns/idiomatismos.",
+            "en": "Provide definitions for unusual words or idioms."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/unusual-words.html",
           "publicos_atendidos": []
         },
@@ -864,8 +1350,14 @@
           "id": "3.1.4",
           "nome": "Abbreviations",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Fornecer explicação para abreviações na primeira ocorrência.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Fornecer explicação para abreviações na primeira ocorrência.",
+            "en": "Provide an explanation for abbreviations at their first occurrence."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/abbreviations.html",
           "publicos_atendidos": []
         },
@@ -873,8 +1365,14 @@
           "id": "3.1.5",
           "nome": "Reading Level",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Oferecer alternativa de conteúdo mais simples quando o nível de leitura é elevado.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Oferecer alternativa de conteúdo mais simples quando o nível de leitura é elevado.",
+            "en": "Offer a simpler alternative version of the content when the reading level is high."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/reading-level.html",
           "publicos_atendidos": []
         },
@@ -882,8 +1380,14 @@
           "id": "3.1.6",
           "nome": "Pronunciation",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Fornecer informações de pronúncia quando necessário para entendimento.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Fornecer informações de pronúncia quando necessário para entendimento.",
+            "en": "Provide pronunciation information when needed for understanding."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/pronunciation.html",
           "publicos_atendidos": []
         }
@@ -891,16 +1395,31 @@
     },
     {
       "id": "consistencia-previsibilidade",
-      "nome": "Consistência, previsibilidade",
-      "principio": "Compreensível",
-      "pergunta": "A interface muda automaticamente sem ação do usuário?",
+      "nome": {
+        "pt": "Consistência, previsibilidade",
+        "en": "Consistency, predictability"
+      },
+      "principio": {
+        "pt": "Compreensível",
+        "en": "Understandable"
+      },
+      "pergunta": {
+        "pt": "A interface muda automaticamente sem ação do usuário?",
+        "en": "Does the interface change automatically without user action?"
+      },
       "criterios": [
         {
           "id": "3.2.1",
           "nome": "On Focus",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Não alterar foco/conteúdo ao receber foco sem ação do usuário.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Não alterar foco/conteúdo ao receber foco sem ação do usuário.",
+            "en": "Do not change focus or content when an element receives focus, without user action."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -913,8 +1432,14 @@
           "id": "3.2.2",
           "nome": "On Input",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Evitar mudanças inesperadas ao alterar valores de campos; confirmar antes.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Evitar mudanças inesperadas ao alterar valores de campos; confirmar antes.",
+            "en": "Avoid unexpected changes when field values are altered; confirm before proceeding."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/on-input.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -926,8 +1451,14 @@
           "id": "3.2.3",
           "nome": "Consistent Navigation",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Manter navegação consistente entre páginas do site.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Manter navegação consistente entre páginas do site.",
+            "en": "Keep navigation consistent across the site's pages."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -939,8 +1470,14 @@
           "id": "3.2.4",
           "nome": "Consistent Identification",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Manter identificação consistente de componentes com igual função.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Manter identificação consistente de componentes com igual função.",
+            "en": "Keep the identification of components with the same function consistent."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -953,8 +1490,14 @@
           "id": "3.2.5",
           "nome": "Change on Request",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Permitir ao usuário solicitar mudanças em vez de ocorrer automaticamente.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Permitir ao usuário solicitar mudanças em vez de ocorrer automaticamente.",
+            "en": "Let the user request changes instead of having them occur automatically."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/change-on-request.html",
           "publicos_atendidos": []
         },
@@ -962,8 +1505,14 @@
           "id": "3.2.6",
           "nome": "Consistent Help",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Disponibilizar ajuda consistente (contato, FAQs, chat) nas páginas com entrada de dados.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Disponibilizar ajuda consistente (contato, FAQs, chat) nas páginas com entrada de dados.",
+            "en": "Provide consistent help (contact, FAQs, chat) across pages with data input."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html",
           "publicos_atendidos": [
             "cognitivo_limitado"
@@ -973,16 +1522,31 @@
     },
     {
       "id": "formularios-entradas-de-dados",
-      "nome": "Formulários, entradas de dados",
-      "principio": "Compreensível",
-      "pergunta": "O sistema terá formulários ou entradas de dados?",
+      "nome": {
+        "pt": "Formulários, entradas de dados",
+        "en": "Forms, data input"
+      },
+      "principio": {
+        "pt": "Compreensível",
+        "en": "Understandable"
+      },
+      "pergunta": {
+        "pt": "O sistema terá formulários ou entradas de dados?",
+        "en": "Will the system have forms or data input?"
+      },
       "criterios": [
         {
           "id": "3.3.1",
           "nome": "Error Identification",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Identificar claramente erros de entrada (campo e natureza do erro).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Identificar claramente erros de entrada (campo e natureza do erro).",
+            "en": "Clearly identify input errors (the field and the nature of the error)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -995,8 +1559,14 @@
           "id": "3.3.2",
           "nome": "Labels or Instructions",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Fornecer rótulos e instruções claras antes da entrada.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Fornecer rótulos e instruções claras antes da entrada.",
+            "en": "Provide clear labels and instructions before input."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html",
           "publicos_atendidos": [
             "visao_limitada",
@@ -1007,8 +1577,14 @@
           "id": "3.3.3",
           "nome": "Error Suggestion",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Sugerir correções quando possível (formato, exemplo, máscara).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Sugerir correções quando possível (formato, exemplo, máscara).",
+            "en": "Suggest corrections when possible (format, example, input mask)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -1021,8 +1597,14 @@
           "id": "3.3.4",
           "nome": "Error Prevention (Legal, Financial, Data)",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Prevenir erros em transações críticas (revisão/confirmar/rollback).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Prevenir erros em transações críticas (revisão/confirmar/rollback).",
+            "en": "Prevent errors in critical transactions (review, confirm, or reverse the action)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -1038,8 +1620,14 @@
           "id": "3.3.5",
           "nome": "Help",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Fornecer ajuda contextual e documentação de apoio.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Fornecer ajuda contextual e documentação de apoio.",
+            "en": "Provide contextual help and supporting documentation."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/help.html",
           "publicos_atendidos": []
         },
@@ -1047,8 +1635,14 @@
           "id": "3.3.6",
           "nome": "Error Prevention (All)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Prevenir erros em todas as entradas (AAA), com validações robustas.",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Prevenir erros em todas as entradas (AAA), com validações robustas.",
+            "en": "Prevent errors across all inputs (AAA), with robust validation."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-all.html",
           "publicos_atendidos": []
         },
@@ -1056,8 +1650,14 @@
           "id": "3.3.7",
           "nome": "Redundant Entry",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Evitar entradas redundantes reaproveitando dados já fornecidos pelo usuário.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Evitar entradas redundantes reaproveitando dados já fornecidos pelo usuário.",
+            "en": "Avoid redundant entry by reusing data the user has already provided."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
@@ -1068,8 +1668,14 @@
           "id": "3.3.8",
           "nome": "Accessible Authentication (Minimum)",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Oferecer métodos de autenticação que dispensam recordação cognitiva pesada (ex.: passwordless, cópia/colar permitido).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Oferecer métodos de autenticação que dispensam recordação cognitiva pesada (ex.: passwordless, cópia/colar permitido).",
+            "en": "Offer authentication methods that do not rely on heavy cognitive recall (e.g., passwordless login, allowing copy-paste)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -1081,8 +1687,14 @@
           "id": "3.3.9",
           "nome": "Accessible Authentication (Enhanced)",
           "nivel": "AAA",
-          "obrigatoriedade": "Recomendável",
-          "requisito": "Oferecer autenticação acessível reforçada (sem desafios visuais/cognitivos excessivos).",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Oferecer autenticação acessível reforçada (sem desafios visuais/cognitivos excessivos).",
+            "en": "Offer enhanced accessible authentication (without excessive visual or cognitive challenges)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -1094,16 +1706,31 @@
     },
     {
       "id": "componentes-interativos-robustez",
-      "nome": "Componentes interativos, robustez",
-      "principio": "Robusto",
-      "pergunta": "Há elementos dinâmicos ou interativos na interface?",
+      "nome": {
+        "pt": "Componentes interativos, robustez",
+        "en": "Interactive components, robustness"
+      },
+      "principio": {
+        "pt": "Robusto",
+        "en": "Robust"
+      },
+      "pergunta": {
+        "pt": "Há elementos dinâmicos ou interativos na interface?",
+        "en": "Does the interface have dynamic or interactive elements?"
+      },
       "criterios": [
         {
           "id": "4.1.2",
           "nome": "Name, Role, Value",
           "nivel": "A",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Expor nome, função e valor corretos (ARIA, roles nativos) aos leitores de tela.",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Expor nome, função e valor corretos (ARIA, roles nativos) aos leitores de tela.",
+            "en": "Expose correct name, role, and value (ARIA, native roles) to screen readers."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
           "publicos_atendidos": [
             "sem_visao",
@@ -1116,8 +1743,14 @@
           "id": "4.1.3",
           "nome": "Status Messages",
           "nivel": "AA",
-          "obrigatoriedade": "Obrigatório",
-          "requisito": "Anunciar mensagens de status sem mover o foco (ex.: aria-live).",
+          "obrigatoriedade": {
+            "pt": "Obrigatório",
+            "en": "Required"
+          },
+          "requisito": {
+            "pt": "Anunciar mensagens de status sem mover o foco (ex.: aria-live).",
+            "en": "Announce status messages without moving focus (e.g., aria-live)."
+          },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
           "publicos_atendidos": [
             "sem_visao",

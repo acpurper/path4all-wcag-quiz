@@ -1,6 +1,7 @@
-import type { State, Criterio } from '../types/wcag';
-import type { Dict } from '../i18n/index';
+import type { State, Criterio, Localized } from '../types/wcag';
+import type { Dict, Lang } from '../i18n/index';
 import { categorias, publicos, deveDestacar } from '../lib/wcag';
+import { loc } from '../lib/localized';
 
 interface Props {
   t: Dict;
@@ -10,11 +11,18 @@ interface Props {
 
 const POUR_ORDER = ['Perceptível', 'Operável', 'Compreensível', 'Robusto'] as const;
 
+const POUR_LABELS: Record<(typeof POUR_ORDER)[number], Localized> = {
+  Perceptível: { pt: 'Perceptível', en: 'Perceivable' },
+  Operável: { pt: 'Operável', en: 'Operable' },
+  Compreensível: { pt: 'Compreensível', en: 'Understandable' },
+  Robusto: { pt: 'Robusto', en: 'Robust' },
+};
+
 // Built once at module level — publicos array is static
 const publicoNomeMap = new Map(publicos.map((p) => [p.id, p.nome]));
 
 export function ReportScreen({ t, state, dispatch }: Props) {
-  const { answers, implementado, publicosAtivos } = state;
+  const { answers, implementado, publicosAtivos, lang } = state;
 
   const applicableCategories = categorias.filter(
     (cat) => answers[cat.id] === 'sim' || answers[cat.id] === 'nao_sei',
@@ -23,24 +31,24 @@ export function ReportScreen({ t, state, dispatch }: Props) {
   const byPrinciple: Partial<Record<string, Criterio[]>> = {};
   for (const cat of applicableCategories) {
     for (const criterio of cat.criterios) {
-      const existing = byPrinciple[cat.principio];
+      const existing = byPrinciple[cat.principio.pt];
       if (existing) {
         existing.push(criterio);
       } else {
-        byPrinciple[cat.principio] = [criterio];
+        byPrinciple[cat.principio.pt] = [criterio];
       }
     }
   }
 
   const allCriterios = applicableCategories.flatMap((cat) => cat.criterios);
   const totalObrigatorio = allCriterios.filter(
-    (c) => c.obrigatoriedade === 'Obrigatório',
+    (c) => c.obrigatoriedade.pt === 'Obrigatório',
   ).length;
   const totalRecomendavel = allCriterios.filter(
-    (c) => c.obrigatoriedade === 'Recomendável',
+    (c) => c.obrigatoriedade.pt === 'Recomendável',
   ).length;
   const obrigatoriosImplementados = allCriterios.filter(
-    (c) => c.obrigatoriedade === 'Obrigatório' && implementado[c.id],
+    (c) => c.obrigatoriedade.pt === 'Obrigatório' && implementado[c.id],
   ).length;
 
   function expandirTodos() {
@@ -157,13 +165,14 @@ export function ReportScreen({ t, state, dispatch }: Props) {
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                 className="text-2xl font-medium text-[#2D3F2D] mb-4 pb-2 border-b border-[#2D3F2D]/20"
               >
-                {principio}
+                {loc(POUR_LABELS[principio], lang)}
               </h2>
               <ul className="flex flex-col gap-4">
                 {criterios.map((criterio) => (
                   <CriterioItem
                     key={criterio.id}
                     t={t}
+                    lang={lang}
                     criterio={criterio}
                     isImplementado={!!implementado[criterio.id]}
                     publicosAtivos={publicosAtivos}
@@ -198,13 +207,14 @@ function Stat({ label, value }: StatProps) {
 
 interface CriterioItemProps {
   t: Dict;
+  lang: Lang;
   criterio: Criterio;
   isImplementado: boolean;
   publicosAtivos: string[];
   onToggle: () => void;
 }
 
-function CriterioItem({ t, criterio, isImplementado, publicosAtivos, onToggle }: CriterioItemProps) {
+function CriterioItem({ t, lang, criterio, isImplementado, publicosAtivos, onToggle }: CriterioItemProps) {
   const destacado = deveDestacar(criterio, publicosAtivos);
 
   const publicoNomes = criterio.publicos_atendidos
@@ -242,7 +252,7 @@ function CriterioItem({ t, criterio, isImplementado, publicosAtivos, onToggle }:
         </div>
         <div className="flex flex-wrap gap-2">
           <NivelBadge t={t} nivel={criterio.nivel} />
-          <ObrigBadge obrigatoriedade={criterio.obrigatoriedade} />
+          <ObrigBadge obrigatoriedade={criterio.obrigatoriedade} lang={lang} />
           {destacado && (
             <span className="text-xs font-medium text-[#2D3F2D] break-words min-w-0">
               {t.report.relevantePara(publicoNomes)}
@@ -253,7 +263,7 @@ function CriterioItem({ t, criterio, isImplementado, publicosAtivos, onToggle }:
 
       {/* Requirement text */}
       <p className="text-sm text-[#5C5C5C] leading-relaxed mb-2 break-words [overflow-wrap:anywhere]">
-        {criterio.requisito}
+        {loc(criterio.requisito, lang)}
       </p>
 
       {/* No público mapping notice */}
@@ -327,7 +337,7 @@ function CriterioItem({ t, criterio, isImplementado, publicosAtivos, onToggle }:
             <p className="text-[#5C5C5C] leading-relaxed break-words [overflow-wrap:anywhere]">
               {t.bdd.cenarioA(criterio.id)}<br />
               {t.bdd.cenarioB}<br />
-              {t.bdd.cenarioCPre}<em>"{criterio.requisito}"</em>
+              {t.bdd.cenarioCPre}<em>"{loc(criterio.requisito, lang)}"</em>
             </p>
           </div>
 
@@ -354,11 +364,12 @@ function NivelBadge({ t, nivel }: NivelBadgeProps) {
 }
 
 interface ObrigBadgeProps {
-  obrigatoriedade: 'Obrigatório' | 'Recomendável';
+  obrigatoriedade: Criterio['obrigatoriedade'];
+  lang: Lang;
 }
 
-function ObrigBadge({ obrigatoriedade }: ObrigBadgeProps) {
-  const isObrig = obrigatoriedade === 'Obrigatório';
+function ObrigBadge({ obrigatoriedade, lang }: ObrigBadgeProps) {
+  const isObrig = obrigatoriedade.pt === 'Obrigatório';
   return (
     <span
       className={[
@@ -368,7 +379,7 @@ function ObrigBadge({ obrigatoriedade }: ObrigBadgeProps) {
           : 'border border-[#1A1A1A]/25 text-[#5C5C5C]',
       ].join(' ')}
     >
-      {obrigatoriedade}
+      {loc(obrigatoriedade, lang)}
     </span>
   );
 }

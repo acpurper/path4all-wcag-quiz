@@ -2,21 +2,29 @@
 // de interface, nunca candidatos a tradução e nunca regerados a partir de nomes.
 import type { Lang } from '../i18n/index';
 
+export interface Localized {
+  pt: string;
+  en: string;
+}
+
 export interface Criterio {
   id: string;
   nome: string;
   nivel: 'A' | 'AA' | 'AAA';
-  obrigatoriedade: 'Obrigatório' | 'Recomendável';
-  requisito: string;
+  obrigatoriedade: {
+    pt: 'Obrigatório' | 'Recomendável';
+    en: 'Required' | 'Recommended';
+  };
+  requisito: Localized;
   link_w3c: string;
   publicos_atendidos: string[];
 }
 
 export interface Categoria {
   id: string;
-  nome: string;
-  principio: string;
-  pergunta: string;
+  nome: Localized;
+  principio: Localized;
+  pergunta: Localized;
   criterios: Criterio[];
 }
 

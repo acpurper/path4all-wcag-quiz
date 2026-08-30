@@ -3,6 +3,7 @@ import type { State, Answer } from '../types/wcag';
 import type { Dict } from '../i18n/index';
 import { categorias, TOTAL_QUESTIONS } from '../lib/wcag';
 import { ProgressBar } from '../components/ProgressBar';
+import { loc } from '../lib/localized';
 
 interface Props {
   t: Dict;
@@ -11,7 +12,7 @@ interface Props {
 }
 
 export function QuizScreen({ t, state, dispatch }: Props) {
-  const { currentQuestionIndex, answers } = state;
+  const { currentQuestionIndex, answers, lang } = state;
   const categoria = categorias[currentQuestionIndex];
   const headingRef = useRef<HTMLHeadingElement>(null);
   const isFirstRender = useRef(true);
@@ -35,7 +36,7 @@ export function QuizScreen({ t, state, dispatch }: Props) {
       lastAnnouncedIndex.current !== currentQuestionIndex
     ) {
       setAnnouncement(
-        t.a11y.anuncio(currentQuestionIndex + 1, TOTAL_QUESTIONS, categoria.pergunta),
+        t.a11y.anuncio(currentQuestionIndex + 1, TOTAL_QUESTIONS, loc(categoria.pergunta, lang)),
       );
     }
     lastAnnouncedIndex.current = currentQuestionIndex;
@@ -81,7 +82,7 @@ export function QuizScreen({ t, state, dispatch }: Props) {
         </div>
 
         <p className="text-sm font-medium text-[#2D3F2D] uppercase tracking-wide mb-2">
-          {categoria.nome}
+          {loc(categoria.nome, lang)}
         </p>
 
         <h1
@@ -90,7 +91,7 @@ export function QuizScreen({ t, state, dispatch }: Props) {
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           className="text-3xl sm:text-4xl font-medium text-[#1A1A1A] mb-10 leading-tight"
         >
-          {categoria.pergunta}
+          {loc(categoria.pergunta, lang)}
         </h1>
 
         <div
