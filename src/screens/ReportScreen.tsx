@@ -246,9 +246,9 @@ function CriterioItem({ t, lang, criterio, isImplementado, publicosAtivos, onTog
           <span className="font-mono text-xs text-[#5C5C5C] shrink-0">
             {criterio.id}
           </span>
-          <span className="font-semibold text-sm text-[#1A1A1A] break-words min-w-0">
+          <h3 className="font-semibold text-sm text-[#1A1A1A] break-words min-w-0">
             {criterio.nome}
-          </span>
+          </h3>
         </div>
         <div className="flex flex-wrap gap-2">
           <NivelBadge t={t} nivel={criterio.nivel} />
