@@ -18,7 +18,7 @@ A verificação automatizada cobre o que o axe-core consegue detectar e não ate
 
 A interface está disponível em português e em inglês. O idioma é alternado pelo seletor no topo da página, sem recarregar, e também pode vir na URL: `?lang=pt` ou `?lang=en` — útil para compartilhar um link já no idioma desejado. A escolha persiste entre visitas e o atributo `lang` do documento acompanha a troca. Na dúvida, vale primeiro o parâmetro da URL; sem ele, o idioma gravado na visita anterior; sem nada gravado, o idioma do navegador; e, em último caso, português.
 
-Os textos de interface ficam nos dicionários tipados em `src/i18n/`; os dados do mapeamento WCAG (categorias, perguntas, princípios, requisitos e públicos) são bilíngues em `data/wcag-mapping.json`. As traduções do dataset para o inglês são provisórias e aguardam revisão pela pesquisadora responsável.
+Os textos de interface ficam nos dicionários tipados em `src/i18n/`; os dados do mapeamento WCAG (categorias, perguntas, princípios, requisitos e públicos) são bilíngues em `data/wcag-mapping.json`. As traduções do dataset para o inglês são provisórias e aguardam revisão pela pesquisadora responsável. Os nove rótulos de grupos de usuários são exceção: foram revisados e aprovados pela pesquisadora responsável em 02/10/2026.
 
 ## Stack
 
