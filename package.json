@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "a11y": "start-server-and-test dev http://localhost:5173 a11y:run",
-    "a11y:run": "node scripts/a11y.mjs"
+    "a11y:run": "node scripts/a11y.mjs",
+    "i18n:regress": "start-server-and-test dev http://localhost:5173 i18n:regress:run",
+    "i18n:regress:run": "node scripts/i18n-regress.mjs"
   },
   "dependencies": {
     "react": "^19.2.6",
