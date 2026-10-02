@@ -1767,14 +1767,14 @@
       "id": "sem_visao",
       "nome": {
         "pt": "Sem visão",
-        "en": "No vision"
+        "en": "Blind"
       }
     },
     {
       "id": "visao_limitada",
       "nome": {
         "pt": "Visão limitada",
-        "en": "Limited vision"
+        "en": "Low vision"
       }
     },
     {
@@ -1788,28 +1788,28 @@
       "id": "sem_audicao",
       "nome": {
         "pt": "Sem audição",
-        "en": "No hearing"
+        "en": "Deaf"
       }
     },
     {
       "id": "audicao_limitada",
       "nome": {
         "pt": "Audição limitada",
-        "en": "Limited hearing"
+        "en": "Hard of hearing"
       }
     },
     {
       "id": "sem_fala",
       "nome": {
         "pt": "Sem fala",
-        "en": "No speech"
+        "en": "Unable to speak"
       }
     },
     {
       "id": "manipulacao_limitada",
       "nome": {
         "pt": "Manipulação limitada",
-        "en": "Limited manipulation"
+        "en": "Limited dexterity"
       }
     },
     {
@@ -1823,7 +1823,7 @@
       "id": "cognitivo_limitado",
       "nome": {
         "pt": "Capacidade cognitiva, de linguagem e aprendizagem limitada",
-        "en": "Limited cognition, language or learning"
+        "en": "Limited cognitive, language, and learning abilities"
       }
     }
   ]
