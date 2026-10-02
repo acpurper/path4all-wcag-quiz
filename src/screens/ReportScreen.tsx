@@ -18,7 +18,9 @@ const POUR_LABELS: Record<(typeof POUR_ORDER)[number], Localized> = {
   Robusto: { pt: 'Robusto', en: 'Robust' },
 };
 
-// Built once at module level — publicos array is static
+// Built once at module level — publicos array is static. Guarda o par { pt, en }
+// sem resolver o idioma: loc() só é chamado na renderização, senão o rótulo
+// ficaria congelado no idioma vigente no import do módulo.
 const publicoNomeMap = new Map(publicos.map((p) => [p.id, p.nome]));
 
 export function ReportScreen({ t, state, dispatch }: Props) {
@@ -140,7 +142,7 @@ export function ReportScreen({ t, state, dispatch }: Props) {
                   htmlFor={`pub-${publico.id}`}
                   className="text-sm text-[#1A1A1A] cursor-pointer select-none"
                 >
-                  {publico.nome}
+                  {loc(publico.nome, lang)}
                 </label>
               </div>
             ))}
@@ -217,8 +219,12 @@ interface CriterioItemProps {
 function CriterioItem({ t, lang, criterio, isImplementado, publicosAtivos, onToggle }: CriterioItemProps) {
   const destacado = deveDestacar(criterio, publicosAtivos);
 
+  // O id é a chave estável para agrupar e comparar; o nome serve só para exibir.
   const publicoNomes = criterio.publicos_atendidos
-    .map((id) => publicoNomeMap.get(id) ?? id)
+    .map((id) => {
+      const nome = publicoNomeMap.get(id);
+      return nome ? loc(nome, lang) : id;
+    })
     .join(', ');
 
   const personaDescricao =

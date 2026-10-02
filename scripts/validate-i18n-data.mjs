@@ -99,10 +99,27 @@ for (const categoria of categorias) {
   }
 }
 
+const publicos = mapping.publicos ?? [];
+
+if (publicos.length !== 9) {
+  errors.push(`Esperava 9 públicos, encontrou ${publicos.length}`);
+}
+
+for (const publico of publicos) {
+  if (!isNonEmptyString(publico.id)) {
+    errors.push(`Público sem id válido: ${JSON.stringify(publico)}`);
+  }
+  if (!isBilingual(publico.nome)) {
+    errors.push(
+      `Público ${publico.id}: nome não é { pt, en } com ambos preenchidos, encontrou ${JSON.stringify(publico.nome)}`,
+    );
+  }
+}
+
 if (errors.length > 0) {
   console.error(`Validação falhou com ${errors.length} erro(s):`);
   for (const e of errors) console.error(` - ${e}`);
   process.exit(1);
 }
 
-console.log('Validação ok: 13 categorias, 86 critérios, shape bilíngue consistente.');
+console.log('Validação ok: 13 categorias, 86 critérios, 9 públicos, shape bilíngue consistente.');

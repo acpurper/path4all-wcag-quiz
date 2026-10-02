@@ -30,7 +30,7 @@ export interface Categoria {
 
 export interface Publico {
   id: string;
-  nome: string;
+  nome: Localized;
 }
 
 export type Answer = 'sim' | 'nao' | 'nao_sei';

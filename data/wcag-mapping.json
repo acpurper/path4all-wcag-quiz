@@ -1765,39 +1765,66 @@
   "publicos": [
     {
       "id": "sem_visao",
-      "nome": "Sem visão"
+      "nome": {
+        "pt": "Sem visão",
+        "en": "No vision"
+      }
     },
     {
       "id": "visao_limitada",
-      "nome": "Visão limitada"
+      "nome": {
+        "pt": "Visão limitada",
+        "en": "Limited vision"
+      }
     },
     {
       "id": "sem_percepcao_cor",
-      "nome": "Sem percepção de cor"
+      "nome": {
+        "pt": "Sem percepção de cor",
+        "en": "No color perception"
+      }
     },
     {
       "id": "sem_audicao",
-      "nome": "Sem audição"
+      "nome": {
+        "pt": "Sem audição",
+        "en": "No hearing"
+      }
     },
     {
       "id": "audicao_limitada",
-      "nome": "Audição limitada"
+      "nome": {
+        "pt": "Audição limitada",
+        "en": "Limited hearing"
+      }
     },
     {
       "id": "sem_fala",
-      "nome": "Sem fala"
+      "nome": {
+        "pt": "Sem fala",
+        "en": "No speech"
+      }
     },
     {
       "id": "manipulacao_limitada",
-      "nome": "Manipulação limitada"
+      "nome": {
+        "pt": "Manipulação limitada",
+        "en": "Limited manipulation"
+      }
     },
     {
       "id": "alcance_forca_limitados",
-      "nome": "Alcance e força limitados"
+      "nome": {
+        "pt": "Alcance e força limitados",
+        "en": "Limited reach and strength"
+      }
     },
     {
       "id": "cognitivo_limitado",
-      "nome": "Capacidade cognitiva, de linguagem e aprendizagem limitada"
+      "nome": {
+        "pt": "Capacidade cognitiva, de linguagem e aprendizagem limitada",
+        "en": "Limited cognition, language or learning"
+      }
     }
   ]
 }
