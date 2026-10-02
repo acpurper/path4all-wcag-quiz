@@ -75,7 +75,7 @@ export const pt = {
       'Esqueleto inicial. Adapte a persona, contexto e cenário ao seu projeto antes de usar.',
     headingPersona: 'Persona',
     persona: (descricao: string) =>
-      `Como pessoa com ${descricao}, usando o sistema.`,
+      `Como pessoa usuária (${descricao}), usando o sistema.`,
     headingUserStory: 'User Story',
     userStory: (id: string, nome: string) =>
       `Eu quero que o critério ${id} — ${nome} seja atendido, para que eu possa interagir com o sistema sem barreiras.`,

@@ -225,7 +225,9 @@ function CriterioItem({ t, lang, criterio, isImplementado, publicosAtivos, onTog
       const nome = publicoNomeMap.get(id);
       return nome ? loc(nome, lang) : id;
     })
-    .join(', ');
+    // Ponto e vírgula: os rótulos podem conter vírgula, o que torna a lista
+    // ambígua se o separador também for vírgula.
+    .join('; ');
 
   const personaDescricao =
     publicoNomes.length > 0

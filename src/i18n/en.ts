@@ -78,7 +78,7 @@ export const en: Dict = {
       'Initial skeleton. Adapt the persona, context, and scenario to your project before use.',
     headingPersona: 'Persona',
     persona: (descricao: string) =>
-      `As a person with ${descricao}, using the system.`,
+      `As a user (${descricao}), using the system.`,
     headingUserStory: 'User Story',
     userStory: (id: string, nome: string) =>
       `I want criterion ${id} — ${nome} to be met, so that I can interact with the system without barriers.`,

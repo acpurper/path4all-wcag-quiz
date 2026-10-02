@@ -317,7 +317,7 @@ await scenario('(e)', async () => {
           [...document.querySelectorAll('main *')]
             .map((e) => e.textContent?.trim())
             .find(
-              (t) => t && /^(As a person with |Como pessoa com )/.test(t) && t.length < 300,
+              (t) => t && /^(As a user \(|Como pessoa usuária \()/.test(t) && t.length < 300,
             ) ?? '',
         textoTodo: textos,
         semReload: window.__semReload === true,
@@ -352,6 +352,98 @@ await scenario('(e)', async () => {
   conferir('pt', 'en', voltaPt);
 
   await context.close();
+});
+
+// ---- (f): rótulos de público como valores na persona, separados por "; " ----
+await scenario('(f)', async () => {
+  console.log('(f) persona não concatena o rótulo como complemento e separa a lista por "; "');
+
+  // Padrão que acusa a redação antiga ("... person with Blind", "... pessoa com Sem visão").
+  const GRUDADO_SRC = '(person with|pessoa com)\\s+(Blind|Deaf|Low vision|Sem |No |Limited|Hard)';
+  const PREFIXO = { pt: /^Como pessoa usuária \(/, en: /^As a user \(/ };
+  const CRIT = '1.2.2';
+  // Seletores por idioma, derivados dos rótulos reais dos dicionários.
+  const BOTOES = {
+    pt: { comecar: BTN_START_PT, sim: BTN_YES_PT, expandir: /expandir/i },
+    en: { comecar: /^Start$/i, sim: /^Yes/i, expandir: /expand/i },
+  };
+
+  for (const locale of ['pt', 'en']) {
+    const SEL = BOTOES[locale];
+    const context = await browser.newContext({ locale: 'pt-BR' });
+    const page = await context.newPage();
+    page.setDefaultTimeout(8000);
+
+    await page.goto(`${BASE}/?lang=${locale}`);
+    await page.evaluate(() => localStorage.clear());
+    await page.goto(`${BASE}/?lang=${locale}`);
+    await page.getByRole('button', { name: SEL.comecar }).click();
+    await page.getByRole('progressbar').waitFor();
+    await answerAll(page, SEL.sim);
+    await page.getByRole('button', { name: SEL.expandir }).click();
+    await page.waitForFunction(() => {
+      const todos = document.querySelectorAll('details');
+      const abertos = document.querySelectorAll('details[open]');
+      return todos.length > 0 && todos.length === abertos.length;
+    });
+
+    // (i) nenhuma persona renderizada usa o rótulo como complemento da preposição
+    const personas = await page.evaluate(
+      (pre) =>
+        [...new Set(
+          [...document.querySelectorAll('main *')]
+            .map((e) => e.textContent?.trim())
+            .filter((t) => t && new RegExp(pre).test(t) && t.length < 400),
+        )],
+      PREFIXO[locale].source,
+    );
+    check(`[${locale}] personas renderizadas encontradas`, String(personas.length > 0), 'true');
+    // A varredura é sobre TODO o texto do relatório, não só sobre o que casa com
+    // o prefixo novo: se o template voltar ao antigo, o prefixo deixa de casar e
+    // uma checagem restrita às personas encontradas ficaria vazia — e verde.
+    const textoRelatorio = await page.evaluate(() => document.querySelector('main').innerText);
+    const grudado = textoRelatorio.match(new RegExp(GRUDADO_SRC));
+    check(
+      `[${locale}] nenhum rótulo grudado na preposição em todo o relatório`,
+      grudado ? JSON.stringify(grudado[0]) : 'nenhum',
+      'nenhum',
+    );
+
+    // (ii) a persona do 1.2.2 traz os 3 rótulos do dataset, separados por "; "
+    const esperados = rawData.categorias
+      .flatMap((c) => c.criterios)
+      .find((k) => k.id === CRIT)
+      .publicos_atendidos.map(
+        (id) => rawData.publicos.find((p) => p.id === id).nome[locale],
+      );
+    check(`[${locale}] ${CRIT} tem 3 públicos no dataset`, String(esperados.length), '3');
+
+    const alvo = await page.evaluate(
+      ({ cid, pre }) => {
+        const li = [...document.querySelectorAll('li.criterio')].find((e) =>
+          e.textContent.trim().startsWith(cid),
+        );
+        if (!li) return null;
+        return (
+          [...li.querySelectorAll('*')]
+            .map((e) => e.textContent?.trim())
+            .find((t) => t && new RegExp(pre).test(t) && t.length < 400) ?? null
+        );
+      },
+      { cid: CRIT, pre: PREFIXO[locale].source },
+    );
+    check(`[${locale}] persona do ${CRIT} renderizada`, String(alvo !== null), 'true');
+
+    const lista = alvo?.match(/\(([^)]*)\)/)?.[1] ?? '';
+    check(`[${locale}] lista do ${CRIT} separada por "; "`, lista, esperados.join('; '));
+    check(
+      `[${locale}] sem vírgula entre o 1o e o 2o rótulo do ${CRIT}`,
+      String(!lista.startsWith(`${esperados[0]},`)),
+      'true',
+    );
+
+    await context.close();
+  }
 });
 
 await browser.close();
