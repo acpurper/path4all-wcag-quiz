@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "a11y": "node scripts/a11y.mjs"
+    "a11y": "start-server-and-test dev http://localhost:5173 a11y:run",
+    "a11y:run": "node scripts/a11y.mjs"
   },
   "dependencies": {
     "react": "^19.2.6",
@@ -27,6 +28,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "playwright": "^1.60.0",
+    "start-server-and-test": "^3.0.12",
     "tailwindcss": "^4.3.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
