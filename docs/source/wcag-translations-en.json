@@ -1,0 +1,2152 @@
+[
+  {
+    "criterio": "1.1.1",
+    "nome": "Non-text Content",
+    "nivel": "A",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Imagens, ícones, gráficos",
+      "en": "Images, icons, graphics"
+    },
+    "pergunta": {
+      "pt": "Há elementos não textuais na interface?",
+      "en": "Does the interface have non-text elements?"
+    },
+    "requisito": {
+      "pt": "Fornecer texto alternativo significativo para imagens informativas; usar alt=\"\" ou role=presentation para decorativas.",
+      "en": "Provide meaningful alternative text for informative images; use alt=\"\" or role=\"presentation\" for decorative ones."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.2.1",
+    "nome": "Audio-only and Video-only (Prerecorded)",
+    "nivel": "A",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Áudio, vídeo, mídia temporal",
+      "en": "Audio, video, time-based media"
+    },
+    "pergunta": {
+      "pt": "O sistema terá áudio ou vídeo?",
+      "en": "Will the system have audio or video?"
+    },
+    "requisito": {
+      "pt": "Para áudio pré-gravado: disponibilizar transcrição; para vídeo sem áudio: alternativa equivalente em texto.",
+      "en": "For prerecorded audio: provide a transcript; for video-only content: provide an equivalent text alternative."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.2.2",
+    "nome": "Captions (Prerecorded)",
+    "nivel": "A",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Áudio, vídeo, mídia temporal",
+      "en": "Audio, video, time-based media"
+    },
+    "pergunta": {
+      "pt": "O sistema terá áudio ou vídeo?",
+      "en": "Will the system have audio or video?"
+    },
+    "requisito": {
+      "pt": "Fornecer legendas sincronizadas para todo vídeo pré-gravado com áudio.",
+      "en": "Provide synchronized captions for all prerecorded video with audio."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.2.3",
+    "nome": "Audio Description or Media Alternative (Prerecorded)",
+    "nivel": "A",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Áudio, vídeo, mídia temporal",
+      "en": "Audio, video, time-based media"
+    },
+    "pergunta": {
+      "pt": "O sistema terá áudio ou vídeo?",
+      "en": "Will the system have audio or video?"
+    },
+    "requisito": {
+      "pt": "Para vídeos, fornecer audiodescrição ou alternativa em texto descrevendo as informações visuais relevantes.",
+      "en": "For videos, provide audio description or a text alternative describing the relevant visual information."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.2.4",
+    "nome": "Captions (Live)",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Áudio, vídeo, mídia temporal",
+      "en": "Audio, video, time-based media"
+    },
+    "pergunta": {
+      "pt": "O sistema terá áudio ou vídeo?",
+      "en": "Will the system have audio or video?"
+    },
+    "requisito": {
+      "pt": "Fornecer legendas em tempo real para transmissões ao vivo com áudio.",
+      "en": "Provide real-time captions for live audio broadcasts."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.2.5",
+    "nome": "Audio Description (Prerecorded)",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Áudio, vídeo, mídia temporal",
+      "en": "Audio, video, time-based media"
+    },
+    "pergunta": {
+      "pt": "O sistema terá áudio ou vídeo?",
+      "en": "Will the system have audio or video?"
+    },
+    "requisito": {
+      "pt": "Incluir faixa de audiodescrição para vídeos com informações visuais essenciais.",
+      "en": "Include an audio description track for videos with essential visual information."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.2.6",
+    "nome": "Sign Language (Prerecorded)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Áudio, vídeo, mídia temporal",
+      "en": "Audio, video, time-based media"
+    },
+    "pergunta": {
+      "pt": "O sistema terá áudio ou vídeo?",
+      "en": "Will the system have audio or video?"
+    },
+    "requisito": {
+      "pt": "Atender ao critério 1.2.6 — Sign Language (Prerecorded) — conforme diretrizes WCAG e normas correlatas.",
+      "en": "Meet criterion 1.2.6 — Sign Language (Prerecorded) — per WCAG guidelines and related standards."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "1.2.7",
+    "nome": "Extended Audio Description (Prerecorded)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Áudio, vídeo, mídia temporal",
+      "en": "Audio, video, time-based media"
+    },
+    "pergunta": {
+      "pt": "O sistema terá áudio ou vídeo?",
+      "en": "Will the system have audio or video?"
+    },
+    "requisito": {
+      "pt": "Atender ao critério 1.2.7 — Extended Audio Description (Prerecorded) — conforme diretrizes WCAG e normas correlatas.",
+      "en": "Meet criterion 1.2.7 — Extended Audio Description (Prerecorded) — per WCAG guidelines and related standards."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "1.2.8",
+    "nome": "Media Alternative (Prerecorded)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Áudio, vídeo, mídia temporal",
+      "en": "Audio, video, time-based media"
+    },
+    "pergunta": {
+      "pt": "O sistema terá áudio ou vídeo?",
+      "en": "Will the system have audio or video?"
+    },
+    "requisito": {
+      "pt": "Atender ao critério 1.2.8 — Media Alternative (Prerecorded) — conforme diretrizes WCAG e normas correlatas.",
+      "en": "Meet criterion 1.2.8 — Media Alternative (Prerecorded) — per WCAG guidelines and related standards."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "1.2.9",
+    "nome": "Audio-only (Live)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Áudio, vídeo, mídia temporal",
+      "en": "Audio, video, time-based media"
+    },
+    "pergunta": {
+      "pt": "O sistema terá áudio ou vídeo?",
+      "en": "Will the system have audio or video?"
+    },
+    "requisito": {
+      "pt": "Atender ao critério 1.2.9 — Audio-only (Live) — conforme diretrizes WCAG e normas correlatas.",
+      "en": "Meet criterion 1.2.9 — Audio-only (Live) — per WCAG guidelines and related standards."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "1.3.1",
+    "nome": "Info and Relationships",
+    "nivel": "A",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Estrutura, layout, semântica",
+      "en": "Structure, layout, semantics"
+    },
+    "pergunta": {
+      "pt": "A interface usa cabeçalhos, tabelas ou estrutura semântica?",
+      "en": "Does the interface use headings, tables, or semantic structure?"
+    },
+    "requisito": {
+      "pt": "Usar marcação semântica (headings H1–H6, listas, <th>/<td>, <label>); não estilizar sem semântica equivalente.",
+      "en": "Use semantic markup (H1–H6 headings, lists, <th>/<td>, <label>); do not style elements without equivalent semantics."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.3.2",
+    "nome": "Meaningful Sequence",
+    "nivel": "A",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Estrutura, layout, semântica",
+      "en": "Structure, layout, semantics"
+    },
+    "pergunta": {
+      "pt": "A interface usa cabeçalhos, tabelas ou estrutura semântica?",
+      "en": "Does the interface use headings, tables, or semantic structure?"
+    },
+    "requisito": {
+      "pt": "Garantir que a ordem DOM e a ordem de leitura pelo teclado reflitam a ordem visual prevista.",
+      "en": "Ensure the DOM order and keyboard reading order reflect the intended visual order."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.3.3",
+    "nome": "Sensory Characteristics",
+    "nivel": "A",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Estrutura, layout, semântica",
+      "en": "Structure, layout, semantics"
+    },
+    "pergunta": {
+      "pt": "A interface usa cabeçalhos, tabelas ou estrutura semântica?",
+      "en": "Does the interface use headings, tables, or semantic structure?"
+    },
+    "requisito": {
+      "pt": "Não depender exclusivamente de forma/cor/posição; incluir rótulos e instruções explícitas.",
+      "en": "Do not rely solely on shape, color, or position; include explicit labels and instructions."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.3.4",
+    "nome": "Orientation",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Estrutura, layout, semântica",
+      "en": "Structure, layout, semantics"
+    },
+    "pergunta": {
+      "pt": "A interface usa cabeçalhos, tabelas ou estrutura semântica?",
+      "en": "Does the interface use headings, tables, or semantic structure?"
+    },
+    "requisito": {
+      "pt": "Permitir rotação (portrait/landscape) sem perda de conteúdo ou funcionalidade.",
+      "en": "Support both orientations (portrait/landscape) without loss of content or functionality."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.3.5",
+    "nome": "Identify Input Purpose",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Estrutura, layout, semântica",
+      "en": "Structure, layout, semantics"
+    },
+    "pergunta": {
+      "pt": "A interface usa cabeçalhos, tabelas ou estrutura semântica?",
+      "en": "Does the interface use headings, tables, or semantic structure?"
+    },
+    "requisito": {
+      "pt": "Identificar a finalidade de campos de entrada (autocomplete, propósito semântico) quando aplicável.",
+      "en": "Identify the purpose of input fields (autocomplete, semantic purpose) when applicable."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.3.6",
+    "nome": "Identify Purpose",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Estrutura, layout, semântica",
+      "en": "Structure, layout, semantics"
+    },
+    "pergunta": {
+      "pt": "A interface usa cabeçalhos, tabelas ou estrutura semântica?",
+      "en": "Does the interface use headings, tables, or semantic structure?"
+    },
+    "requisito": {
+      "pt": "Identificar finalidade de regiões/controles para personalização assistiva.",
+      "en": "Identify the purpose of regions and controls to support assistive personalization."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "1.4.1",
+    "nome": "Use of Color",
+    "nivel": "A",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Não transmitir informação apenas por cor; incluir ícones/labels para reforço.",
+      "en": "Do not convey information by color alone; include icons or labels for reinforcement."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.4.2",
+    "nome": "Audio Control",
+    "nivel": "A",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Disponibilizar controle para pausar/parar áudio que inicia automaticamente e dura >3s.",
+      "en": "Provide a control to pause or stop audio that starts automatically and lasts more than 3 seconds."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.4.3",
+    "nome": "Contrast (Minimum)",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Garantir contraste mínimo de 4.5:1 (ou 3:1 para texto grande e UI desabilitada).",
+      "en": "Ensure a minimum contrast ratio of 4.5:1 (or 3:1 for large text and disabled UI elements)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.4.4",
+    "nome": "Resize Text",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Permitir aumento do texto até 200% sem perda de conteúdo/funcionalidade.",
+      "en": "Allow text to be resized up to 200% without loss of content or functionality."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.4.5",
+    "nome": "Images of Text",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Evitar imagens de texto; quando necessário, fornecer controle equivalente em texto.",
+      "en": "Avoid images of text; when necessary, provide an equivalent text-based control."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.4.6",
+    "nome": "Contrast (Enhanced)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Fornecer contraste aprimorado (7:1 para texto normal; 4.5:1 para texto grande).",
+      "en": "Provide enhanced contrast (7:1 for normal text; 4.5:1 for large text)."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "1.4.7",
+    "nome": "Low or No Background Audio",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Fornecer áudio de fundo baixo/sem áudio para facilitar a audição do conteúdo principal.",
+      "en": "Provide low or no background audio to make the primary audio content easier to hear."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "1.4.8",
+    "nome": "Visual Presentation",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Oferecer controle de largura de linha, espaçamento e justificação para leitura.",
+      "en": "Offer control over line width, spacing, and justification to support reading."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "1.4.9",
+    "nome": "Images of Text (No Exception)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Evitar totalmente imagens de texto, exceto logotipos.",
+      "en": "Avoid images of text entirely, except for logotypes."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "1.4.10",
+    "nome": "Reflow",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Permitir reflow (uma coluna) até 320 CSS px sem scroll bidirecional.",
+      "en": "Support reflow to a single column at 320 CSS px without two-dimensional scrolling."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.4.11",
+    "nome": "Non-text Contrast",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Garantir contraste ≥3:1 para componentes não textuais (ícones, bordas, foco).",
+      "en": "Ensure a contrast ratio of at least 3:1 for non-text components (icons, borders, focus indicators)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.4.12",
+    "nome": "Text Spacing",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Não quebrar conteúdo quando o usuário ajusta espaçamento (linha, parágrafo, palavra, caractere).",
+      "en": "Do not break content when the user adjusts spacing (line, paragraph, word, or letter spacing)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "1.4.13",
+    "nome": "Content on Hover or Focus",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Perceptível",
+      "en": "Perceivable"
+    },
+    "tipo": {
+      "pt": "Texto, cores, contraste",
+      "en": "Text, color, contrast"
+    },
+    "pergunta": {
+      "pt": "O sistema apresenta texto, cor ou gráficos relevantes?",
+      "en": "Does the system display text, color, or relevant graphics?"
+    },
+    "requisito": {
+      "pt": "Em hover/focus, o conteúdo adicional deve ser dispensável, persistente e focável.",
+      "en": "On hover or focus, additional content must be dismissible, persistent, and focusable."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.1.1",
+    "nome": "Keyboard",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Teclado, navegação",
+      "en": "Keyboard, navigation"
+    },
+    "pergunta": {
+      "pt": "O sistema pode ser usado apenas com teclado?",
+      "en": "Can the system be used with the keyboard alone?"
+    },
+    "requisito": {
+      "pt": "Todas as funcionalidades operáveis por teclado; sem dependência exclusiva de mouse/toque.",
+      "en": "All functionality must be operable via keyboard; do not rely exclusively on mouse or touch input."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.1.2",
+    "nome": "No Keyboard Trap",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Teclado, navegação",
+      "en": "Keyboard, navigation"
+    },
+    "pergunta": {
+      "pt": "O sistema pode ser usado apenas com teclado?",
+      "en": "Can the system be used with the keyboard alone?"
+    },
+    "requisito": {
+      "pt": "Evitar armadilhas de teclado; permitir sair de componentes via métodos padrão (ex.: Esc).",
+      "en": "Avoid keyboard traps; allow the user to exit components using standard methods (e.g., Esc)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.1.3",
+    "nome": "Keyboard (No Exception)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Teclado, navegação",
+      "en": "Keyboard, navigation"
+    },
+    "pergunta": {
+      "pt": "O sistema pode ser usado apenas com teclado?",
+      "en": "Can the system be used with the keyboard alone?"
+    },
+    "requisito": {
+      "pt": "Garantir operação completa por teclado sem exceções.",
+      "en": "Ensure full keyboard operability with no exceptions."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.1.4",
+    "nome": "Character Key Shortcuts",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Teclado, navegação",
+      "en": "Keyboard, navigation"
+    },
+    "pergunta": {
+      "pt": "O sistema pode ser usado apenas com teclado?",
+      "en": "Can the system be used with the keyboard alone?"
+    },
+    "requisito": {
+      "pt": "Disponibilizar desligamento ou alteração de atalhos de tecla única; escopo por foco.",
+      "en": "Provide a way to turn off or remap single-key shortcuts; scope them to the component with focus."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.2.1",
+    "nome": "Timing Adjustable",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Tempo, sessões temporizadas",
+      "en": "Time, timed sessions"
+    },
+    "pergunta": {
+      "pt": "Há tempo limite ou timeout no sistema?",
+      "en": "Does the system have a time limit or timeout?"
+    },
+    "requisito": {
+      "pt": "Oferecer opção de desativar, ajustar ou estender limites de tempo.",
+      "en": "Offer an option to turn off, adjust, or extend time limits."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.2.2",
+    "nome": "Pause, Stop, Hide",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Tempo, sessões temporizadas",
+      "en": "Time, timed sessions"
+    },
+    "pergunta": {
+      "pt": "Há tempo limite ou timeout no sistema?",
+      "en": "Does the system have a time limit or timeout?"
+    },
+    "requisito": {
+      "pt": "Oferecer pausar/parar/ocultar para movimento/atualização que distrai ou interfere.",
+      "en": "Offer a way to pause, stop, or hide moving or updating content that is distracting or interferes with use."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.2.3",
+    "nome": "No Timing",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Tempo, sessões temporizadas",
+      "en": "Time, timed sessions"
+    },
+    "pergunta": {
+      "pt": "Há tempo limite ou timeout no sistema?",
+      "en": "Does the system have a time limit or timeout?"
+    },
+    "requisito": {
+      "pt": "Não exigir tempo para leitura/operação, salvo essencial.",
+      "en": "Do not impose a time limit on reading or operation unless it is essential."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.2.4",
+    "nome": "Interruptions",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Tempo, sessões temporizadas",
+      "en": "Time, timed sessions"
+    },
+    "pergunta": {
+      "pt": "Há tempo limite ou timeout no sistema?",
+      "en": "Does the system have a time limit or timeout?"
+    },
+    "requisito": {
+      "pt": "Permitir adiar e controlar interrupções (ex.: notificações).",
+      "en": "Allow the user to postpone and control interruptions (e.g., notifications)."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.2.5",
+    "nome": "Re-authenticating",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Tempo, sessões temporizadas",
+      "en": "Time, timed sessions"
+    },
+    "pergunta": {
+      "pt": "Há tempo limite ou timeout no sistema?",
+      "en": "Does the system have a time limit or timeout?"
+    },
+    "requisito": {
+      "pt": "Manter dados ao reautenticar para evitar perda de informação.",
+      "en": "Preserve entered data when re-authenticating to avoid loss of information."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.2.6",
+    "nome": "Timeouts",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Tempo, sessões temporizadas",
+      "en": "Time, timed sessions"
+    },
+    "pergunta": {
+      "pt": "Há tempo limite ou timeout no sistema?",
+      "en": "Does the system have a time limit or timeout?"
+    },
+    "requisito": {
+      "pt": "Informar timeouts que possam causar perda de dados; fornecer alerta e preservação.",
+      "en": "Warn about timeouts that could cause data loss; provide an alert and preserve the data."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.3.1",
+    "nome": "Three Flashes or Below Threshold",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Animações, flashes",
+      "en": "Animations, flashing"
+    },
+    "pergunta": {
+      "pt": "O sistema terá animações, movimento ou flashes?",
+      "en": "Will the system have animations, motion, or flashing?"
+    },
+    "requisito": {
+      "pt": "Evitar conteúdo com mais de três flashes por segundo ou abaixo do limiar seguro.",
+      "en": "Avoid content with more than three flashes per second, or below the safe threshold."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.3.2",
+    "nome": "Three Flashes",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Animações, flashes",
+      "en": "Animations, flashing"
+    },
+    "pergunta": {
+      "pt": "O sistema terá animações, movimento ou flashes?",
+      "en": "Will the system have animations, motion, or flashing?"
+    },
+    "requisito": {
+      "pt": "Não haver flashes que possam provocar convulsões, mesmo abaixo do limiar.",
+      "en": "There must be no flashing capable of triggering seizures, even below the general threshold."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.3.3",
+    "nome": "Animation from Interactions",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Animações, flashes",
+      "en": "Animations, flashing"
+    },
+    "pergunta": {
+      "pt": "O sistema terá animações, movimento ou flashes?",
+      "en": "Will the system have animations, motion, or flashing?"
+    },
+    "requisito": {
+      "pt": "Oferecer opção de reduzir/evitar animações desencadeadas por interação.",
+      "en": "Offer an option to reduce or avoid animations triggered by interaction."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.4.1",
+    "nome": "Bypass Blocks",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Fornecer mecanismo de pular blocos repetitivos (ex.: link “Ir para conteúdo”).",
+      "en": "Provide a mechanism to skip repeated blocks of content (e.g., a \"Skip to content\" link)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.4.2",
+    "nome": "Page Titled",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Definir título de página que descreva o tópico ou propósito.",
+      "en": "Define a page title that describes the topic or purpose."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.4.3",
+    "nome": "Focus Order",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Garantir ordem de foco que preserva significado e operabilidade.",
+      "en": "Ensure a focus order that preserves meaning and operability."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.4.4",
+    "nome": "Link Purpose (In Context)",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Links descrevem propósito a partir do contexto imediato.",
+      "en": "Links describe their purpose from the immediate surrounding context."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.4.5",
+    "nome": "Multiple Ways",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Disponibilizar múltiplas maneiras de localizar páginas (menu, busca, mapa do site).",
+      "en": "Provide multiple ways to locate pages (menu, search, site map)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.4.6",
+    "nome": "Headings and Labels",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Usar headings e labels descritivos e consistentes.",
+      "en": "Use descriptive, consistent headings and labels."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.4.7",
+    "nome": "Focus Visible",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Indicar foco visível nos elementos interativos.",
+      "en": "Provide a visible focus indicator on interactive elements."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.4.8",
+    "nome": "Location",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Exibir localização do usuário no site (ex.: trilha de navegação).",
+      "en": "Show the user's location within the site (e.g., a breadcrumb trail)."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.4.9",
+    "nome": "Link Purpose (Link Only)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "O texto do link sozinho descreve o destino do link.",
+      "en": "The link text alone describes the link's destination."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.4.10",
+    "nome": "Section Headings",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Fornecer headings de seção para organizar conteúdo extenso.",
+      "en": "Provide section headings to organize lengthy content."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.4.11",
+    "nome": "Focus Not Obscured (Minimum)",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Quando o foco aparece, ele não pode ser obscurecido além do mínimo permitido.",
+      "en": "When focus appears, it must not be obscured beyond the minimum allowed."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.4.12",
+    "nome": "Focus Not Obscured (Enhanced)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "O foco não deve ser obscurecido; garantir visibilidade completa do indicador.",
+      "en": "Focus must not be obscured; ensure the indicator is fully visible."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.4.13",
+    "nome": "Focus Appearance",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Navegação, foco",
+      "en": "Navigation, focus"
+    },
+    "pergunta": {
+      "pt": "A interface possui múltiplas páginas ou navegação?",
+      "en": "Does the interface have multiple pages or navigation?"
+    },
+    "requisito": {
+      "pt": "Aparência do foco atende tamanho/contraste mínimos definidos pela norma.",
+      "en": "The focus appearance meets the minimum size and contrast defined by the standard."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.5.1",
+    "nome": "Pointer Gestures",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Gestos, toques, entradas alternativas",
+      "en": "Gestures, touch, alternative input"
+    },
+    "pergunta": {
+      "pt": "O sistema depende de gestos, arrastar ou entradas especiais?",
+      "en": "Does the system rely on gestures, dragging, or special input methods?"
+    },
+    "requisito": {
+      "pt": "Oferecer alternativa simples a gestos multiponto/caminho (ex.: um toque).",
+      "en": "Offer a simple alternative to multipoint or path-based gestures (e.g., a single tap)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.5.2",
+    "nome": "Pointer Cancellation",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Gestos, toques, entradas alternativas",
+      "en": "Gestures, touch, alternative input"
+    },
+    "pergunta": {
+      "pt": "O sistema depende de gestos, arrastar ou entradas especiais?",
+      "en": "Does the system rely on gestures, dragging, or special input methods?"
+    },
+    "requisito": {
+      "pt": "Evitar ativações acidentais (ex.: acionar na ‘up-event’ e fornecer cancelamento).",
+      "en": "Avoid accidental activation (e.g., trigger on the up-event and provide a way to cancel)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.5.3",
+    "nome": "Label in Name",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Gestos, toques, entradas alternativas",
+      "en": "Gestures, touch, alternative input"
+    },
+    "pergunta": {
+      "pt": "O sistema depende de gestos, arrastar ou entradas especiais?",
+      "en": "Does the system rely on gestures, dragging, or special input methods?"
+    },
+    "requisito": {
+      "pt": "O nome acessível deve conter o rótulo visível (Label in Name).",
+      "en": "The accessible name must include the visible label (Label in Name)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.5.4",
+    "nome": "Motion Actuation",
+    "nivel": "A",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Gestos, toques, entradas alternativas",
+      "en": "Gestures, touch, alternative input"
+    },
+    "pergunta": {
+      "pt": "O sistema depende de gestos, arrastar ou entradas especiais?",
+      "en": "Does the system rely on gestures, dragging, or special input methods?"
+    },
+    "requisito": {
+      "pt": "Permitir desativar controle por movimento ou fornecer alternativa.",
+      "en": "Allow motion-based control to be turned off or provide an alternative."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.5.5",
+    "nome": "Target Size",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Gestos, toques, entradas alternativas",
+      "en": "Gestures, touch, alternative input"
+    },
+    "pergunta": {
+      "pt": "O sistema depende de gestos, arrastar ou entradas especiais?",
+      "en": "Does the system rely on gestures, dragging, or special input methods?"
+    },
+    "requisito": {
+      "pt": "Tamanho do alvo grande (AAA) para acionamento por toque.",
+      "en": "Provide a large target size (AAA) for touch activation."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.5.6",
+    "nome": "Concurrent Input Mechanisms",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Gestos, toques, entradas alternativas",
+      "en": "Gestures, touch, alternative input"
+    },
+    "pergunta": {
+      "pt": "O sistema depende de gestos, arrastar ou entradas especiais?",
+      "en": "Does the system rely on gestures, dragging, or special input methods?"
+    },
+    "requisito": {
+      "pt": "Permitir múltiplos métodos de entrada em paralelo (teclado, toque, caneta).",
+      "en": "Support multiple input methods in parallel (keyboard, touch, stylus)."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "2.5.7",
+    "nome": "Dragging Movements",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Gestos, toques, entradas alternativas",
+      "en": "Gestures, touch, alternative input"
+    },
+    "pergunta": {
+      "pt": "O sistema depende de gestos, arrastar ou entradas especiais?",
+      "en": "Does the system rely on gestures, dragging, or special input methods?"
+    },
+    "requisito": {
+      "pt": "Fornecer alternativa ao arrastar (ex.: botões +/−) para mesma função.",
+      "en": "Provide an alternative to dragging (e.g., +/− buttons) for the same function."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "2.5.8",
+    "nome": "Target Size (Minimum)",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Operável",
+      "en": "Operable"
+    },
+    "tipo": {
+      "pt": "Gestos, toques, entradas alternativas",
+      "en": "Gestures, touch, alternative input"
+    },
+    "pergunta": {
+      "pt": "O sistema depende de gestos, arrastar ou entradas especiais?",
+      "en": "Does the system rely on gestures, dragging, or special input methods?"
+    },
+    "requisito": {
+      "pt": "Garantir tamanho mínimo de alvo conforme a norma (ex.: 24×24 CSS px).",
+      "en": "Ensure a minimum target size as defined by the standard (e.g., 24×24 CSS px)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.1.1",
+    "nome": "Language of Page",
+    "nivel": "A",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Idioma e leitura",
+      "en": "Language and reading"
+    },
+    "pergunta": {
+      "pt": "A interface terá múltiplos idiomas ou texto extenso?",
+      "en": "Will the interface have multiple languages or extensive text?"
+    },
+    "requisito": {
+      "pt": "Definir corretamente o idioma da página (lang).",
+      "en": "Correctly set the page language (lang attribute)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.1.2",
+    "nome": "Language of Parts",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Idioma e leitura",
+      "en": "Language and reading"
+    },
+    "pergunta": {
+      "pt": "A interface terá múltiplos idiomas ou texto extenso?",
+      "en": "Will the interface have multiple languages or extensive text?"
+    },
+    "requisito": {
+      "pt": "Indicar mudanças de idioma em trechos com atributo lang.",
+      "en": "Mark language changes in passages using the lang attribute."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.1.3",
+    "nome": "Unusual Words",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Idioma e leitura",
+      "en": "Language and reading"
+    },
+    "pergunta": {
+      "pt": "A interface terá múltiplos idiomas ou texto extenso?",
+      "en": "Will the interface have multiple languages or extensive text?"
+    },
+    "requisito": {
+      "pt": "Fornecer definições para palavras incomuns/idiomatismos.",
+      "en": "Provide definitions for unusual words or idioms."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "3.1.4",
+    "nome": "Abbreviations",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Idioma e leitura",
+      "en": "Language and reading"
+    },
+    "pergunta": {
+      "pt": "A interface terá múltiplos idiomas ou texto extenso?",
+      "en": "Will the interface have multiple languages or extensive text?"
+    },
+    "requisito": {
+      "pt": "Fornecer explicação para abreviações na primeira ocorrência.",
+      "en": "Provide an explanation for abbreviations at their first occurrence."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "3.1.5",
+    "nome": "Reading Level",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Idioma e leitura",
+      "en": "Language and reading"
+    },
+    "pergunta": {
+      "pt": "A interface terá múltiplos idiomas ou texto extenso?",
+      "en": "Will the interface have multiple languages or extensive text?"
+    },
+    "requisito": {
+      "pt": "Oferecer alternativa de conteúdo mais simples quando o nível de leitura é elevado.",
+      "en": "Offer a simpler alternative version of the content when the reading level is high."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "3.1.6",
+    "nome": "Pronunciation",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Idioma e leitura",
+      "en": "Language and reading"
+    },
+    "pergunta": {
+      "pt": "A interface terá múltiplos idiomas ou texto extenso?",
+      "en": "Will the interface have multiple languages or extensive text?"
+    },
+    "requisito": {
+      "pt": "Fornecer informações de pronúncia quando necessário para entendimento.",
+      "en": "Provide pronunciation information when needed for understanding."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "3.2.1",
+    "nome": "On Focus",
+    "nivel": "A",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Consistência, previsibilidade",
+      "en": "Consistency, predictability"
+    },
+    "pergunta": {
+      "pt": "A interface muda automaticamente sem ação do usuário?",
+      "en": "Does the interface change automatically without user action?"
+    },
+    "requisito": {
+      "pt": "Não alterar foco/conteúdo ao receber foco sem ação do usuário.",
+      "en": "Do not change focus or content when an element receives focus, without user action."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.2.2",
+    "nome": "On Input",
+    "nivel": "A",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Consistência, previsibilidade",
+      "en": "Consistency, predictability"
+    },
+    "pergunta": {
+      "pt": "A interface muda automaticamente sem ação do usuário?",
+      "en": "Does the interface change automatically without user action?"
+    },
+    "requisito": {
+      "pt": "Evitar mudanças inesperadas ao alterar valores de campos; confirmar antes.",
+      "en": "Avoid unexpected changes when field values are altered; confirm before proceeding."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.2.3",
+    "nome": "Consistent Navigation",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Consistência, previsibilidade",
+      "en": "Consistency, predictability"
+    },
+    "pergunta": {
+      "pt": "A interface muda automaticamente sem ação do usuário?",
+      "en": "Does the interface change automatically without user action?"
+    },
+    "requisito": {
+      "pt": "Manter navegação consistente entre páginas do site.",
+      "en": "Keep navigation consistent across the site's pages."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.2.4",
+    "nome": "Consistent Identification",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Consistência, previsibilidade",
+      "en": "Consistency, predictability"
+    },
+    "pergunta": {
+      "pt": "A interface muda automaticamente sem ação do usuário?",
+      "en": "Does the interface change automatically without user action?"
+    },
+    "requisito": {
+      "pt": "Manter identificação consistente de componentes com igual função.",
+      "en": "Keep the identification of components with the same function consistent."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.2.5",
+    "nome": "Change on Request",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Consistência, previsibilidade",
+      "en": "Consistency, predictability"
+    },
+    "pergunta": {
+      "pt": "A interface muda automaticamente sem ação do usuário?",
+      "en": "Does the interface change automatically without user action?"
+    },
+    "requisito": {
+      "pt": "Permitir ao usuário solicitar mudanças em vez de ocorrer automaticamente.",
+      "en": "Let the user request changes instead of having them occur automatically."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "3.2.6",
+    "nome": "Consistent Help",
+    "nivel": "A",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Consistência, previsibilidade",
+      "en": "Consistency, predictability"
+    },
+    "pergunta": {
+      "pt": "A interface muda automaticamente sem ação do usuário?",
+      "en": "Does the interface change automatically without user action?"
+    },
+    "requisito": {
+      "pt": "Disponibilizar ajuda consistente (contato, FAQs, chat) nas páginas com entrada de dados.",
+      "en": "Provide consistent help (contact, FAQs, chat) across pages with data input."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.3.1",
+    "nome": "Error Identification",
+    "nivel": "A",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Formulários, entradas de dados",
+      "en": "Forms, data input"
+    },
+    "pergunta": {
+      "pt": "O sistema terá formulários ou entradas de dados?",
+      "en": "Will the system have forms or data input?"
+    },
+    "requisito": {
+      "pt": "Identificar claramente erros de entrada (campo e natureza do erro).",
+      "en": "Clearly identify input errors (the field and the nature of the error)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.3.2",
+    "nome": "Labels or Instructions",
+    "nivel": "A",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Formulários, entradas de dados",
+      "en": "Forms, data input"
+    },
+    "pergunta": {
+      "pt": "O sistema terá formulários ou entradas de dados?",
+      "en": "Will the system have forms or data input?"
+    },
+    "requisito": {
+      "pt": "Fornecer rótulos e instruções claras antes da entrada.",
+      "en": "Provide clear labels and instructions before input."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.3.3",
+    "nome": "Error Suggestion",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Formulários, entradas de dados",
+      "en": "Forms, data input"
+    },
+    "pergunta": {
+      "pt": "O sistema terá formulários ou entradas de dados?",
+      "en": "Will the system have forms or data input?"
+    },
+    "requisito": {
+      "pt": "Sugerir correções quando possível (formato, exemplo, máscara).",
+      "en": "Suggest corrections when possible (format, example, input mask)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.3.4",
+    "nome": "Error Prevention (Legal, Financial, Data)",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Formulários, entradas de dados",
+      "en": "Forms, data input"
+    },
+    "pergunta": {
+      "pt": "O sistema terá formulários ou entradas de dados?",
+      "en": "Will the system have forms or data input?"
+    },
+    "requisito": {
+      "pt": "Prevenir erros em transações críticas (revisão/confirmar/rollback).",
+      "en": "Prevent errors in critical transactions (review, confirm, or reverse the action)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.3.5",
+    "nome": "Help",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Formulários, entradas de dados",
+      "en": "Forms, data input"
+    },
+    "pergunta": {
+      "pt": "O sistema terá formulários ou entradas de dados?",
+      "en": "Will the system have forms or data input?"
+    },
+    "requisito": {
+      "pt": "Fornecer ajuda contextual e documentação de apoio.",
+      "en": "Provide contextual help and supporting documentation."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "3.3.6",
+    "nome": "Error Prevention (All)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Formulários, entradas de dados",
+      "en": "Forms, data input"
+    },
+    "pergunta": {
+      "pt": "O sistema terá formulários ou entradas de dados?",
+      "en": "Will the system have forms or data input?"
+    },
+    "requisito": {
+      "pt": "Prevenir erros em todas as entradas (AAA), com validações robustas.",
+      "en": "Prevent errors across all inputs (AAA), with robust validation."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "3.3.7",
+    "nome": "Redundant Entry",
+    "nivel": "A",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Formulários, entradas de dados",
+      "en": "Forms, data input"
+    },
+    "pergunta": {
+      "pt": "O sistema terá formulários ou entradas de dados?",
+      "en": "Will the system have forms or data input?"
+    },
+    "requisito": {
+      "pt": "Evitar entradas redundantes reaproveitando dados já fornecidos pelo usuário.",
+      "en": "Avoid redundant entry by reusing data the user has already provided."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.3.8",
+    "nome": "Accessible Authentication (Minimum)",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Formulários, entradas de dados",
+      "en": "Forms, data input"
+    },
+    "pergunta": {
+      "pt": "O sistema terá formulários ou entradas de dados?",
+      "en": "Will the system have forms or data input?"
+    },
+    "requisito": {
+      "pt": "Oferecer métodos de autenticação que dispensam recordação cognitiva pesada (ex.: passwordless, cópia/colar permitido).",
+      "en": "Offer authentication methods that do not rely on heavy cognitive recall (e.g., passwordless login, allowing copy-paste)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "3.3.9",
+    "nome": "Accessible Authentication (Enhanced)",
+    "nivel": "AAA",
+    "principio": {
+      "pt": "Compreensível",
+      "en": "Understandable"
+    },
+    "tipo": {
+      "pt": "Formulários, entradas de dados",
+      "en": "Forms, data input"
+    },
+    "pergunta": {
+      "pt": "O sistema terá formulários ou entradas de dados?",
+      "en": "Will the system have forms or data input?"
+    },
+    "requisito": {
+      "pt": "Oferecer autenticação acessível reforçada (sem desafios visuais/cognitivos excessivos).",
+      "en": "Offer enhanced accessible authentication (without excessive visual or cognitive challenges)."
+    },
+    "obrigatoriedade": {
+      "pt": "Recomendável",
+      "en": "Recommended"
+    }
+  },
+  {
+    "criterio": "4.1.2",
+    "nome": "Name, Role, Value",
+    "nivel": "A",
+    "principio": {
+      "pt": "Robusto",
+      "en": "Robust"
+    },
+    "tipo": {
+      "pt": "Componentes interativos, robustez",
+      "en": "Interactive components, robustness"
+    },
+    "pergunta": {
+      "pt": "Há elementos dinâmicos ou interativos na interface?",
+      "en": "Does the interface have dynamic or interactive elements?"
+    },
+    "requisito": {
+      "pt": "Expor nome, função e valor corretos (ARIA, roles nativos) aos leitores de tela.",
+      "en": "Expose correct name, role, and value (ARIA, native roles) to screen readers."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  },
+  {
+    "criterio": "4.1.3",
+    "nome": "Status Messages",
+    "nivel": "AA",
+    "principio": {
+      "pt": "Robusto",
+      "en": "Robust"
+    },
+    "tipo": {
+      "pt": "Componentes interativos, robustez",
+      "en": "Interactive components, robustness"
+    },
+    "pergunta": {
+      "pt": "Há elementos dinâmicos ou interativos na interface?",
+      "en": "Does the interface have dynamic or interactive elements?"
+    },
+    "requisito": {
+      "pt": "Anunciar mensagens de status sem mover o foco (ex.: aria-live).",
+      "en": "Announce status messages without moving focus (e.g., aria-live)."
+    },
+    "obrigatoriedade": {
+      "pt": "Obrigatório",
+      "en": "Required"
+    }
+  }
+]

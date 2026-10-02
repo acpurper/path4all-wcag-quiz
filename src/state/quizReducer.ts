@@ -1,5 +1,6 @@
 import type { State, Action } from '../types/wcag';
 import { categorias, TOTAL_QUESTIONS } from '../lib/wcag';
+import { detectLang } from '../i18n/detectLang';
 
 export const initialState: State = {
   screen: 'intro',
@@ -8,6 +9,7 @@ export const initialState: State = {
   implementado: {},
   publicosAtivos: [],
   startedAt: null,
+  lang: detectLang(),
 };
 
 export function quizReducer(state: State, action: Action): State {
@@ -15,6 +17,9 @@ export function quizReducer(state: State, action: Action): State {
     case 'START_NEW':
       return {
         ...initialState,
+        // initialState.lang é um instantâneo do detectLang() no import do módulo;
+        // o idioma corrente pode ter mudado pelo toggle desde então.
+        lang: state.lang,
         screen: 'quiz',
         startedAt: Date.now(),
       };
@@ -71,8 +76,11 @@ export function quizReducer(state: State, action: Action): State {
     case 'CLEAR_PUBLICOS':
       return { ...state, publicosAtivos: [] };
 
+    case 'SET_LANG':
+      return { ...state, lang: action.lang };
+
     case 'RESTART':
-      return { ...initialState };
+      return { ...initialState, lang: state.lang };
 
     default:
       return state;

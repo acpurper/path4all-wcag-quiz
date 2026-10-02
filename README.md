@@ -2,7 +2,7 @@
 
 Quiz interativo que ajuda equipes de produto a identificar critérios WCAG 2.2 aplicáveis ao sistema que estão construindo, na fase de especificação de requisitos.
 
-Aplicação prática do método **Path4All** (Personas + User Stories + BDD + WCAG), desenvolvido por Renata Vinadé em sua pesquisa de doutorado na PUCRS, sob orientação da Profa. Dra. Sabrina Marczak.
+Aplicação prática do método **Path4All** (Personas + User Stories + BDD + WCAG) — ver [Créditos](#créditos) para autoria e orientação da pesquisa.
 
 ## Como funciona
 
@@ -10,7 +10,15 @@ O usuário responde a 13 perguntas sobre características do sistema (tem áudio
 
 ## Acessibilidade
 
-O próprio site é exemplo de acessibilidade. Auditado contra os 11 itens críticos definidos em `docs/auditoria-a11y.md` e validado automaticamente via axe-core (`npm run a11y`). Zero violations em todas as telas.
+A acessibilidade é um requisito do projeto: a interface adota a WCAG 2.2 como referência. Os 11 itens críticos de `docs/auditoria-a11y.md` foram auditados em 28/05/2026 (três telas, em português); desde então, a verificação automatizada com axe-core (`npm run a11y`) cobre oito cenas: Intro, Quiz, relatório fechado e relatório expandido, cada uma em português e em inglês.
+
+A verificação automatizada cobre o que o axe-core consegue detectar e não atesta conformidade com a WCAG 2.2 — consulte `docs/auditoria-a11y.md` para o escopo auditado, os itens verificados manualmente e os limites do método.
+
+## Idiomas
+
+A interface está disponível em português e em inglês. O idioma é alternado pelo seletor no topo da página, sem recarregar, e também pode vir na URL: `?lang=pt` ou `?lang=en` — útil para compartilhar um link já no idioma desejado. A escolha persiste entre visitas e o atributo `lang` do documento acompanha a troca. Na dúvida, vale primeiro o parâmetro da URL; sem ele, o idioma gravado na visita anterior; sem nada gravado, o idioma do navegador; e, em último caso, português.
+
+Os textos de interface ficam nos dicionários tipados em `src/i18n/`; os dados do mapeamento WCAG (categorias, perguntas, princípios, requisitos e públicos) são bilíngues em `data/wcag-mapping.json`. As traduções do dataset para o inglês são provisórias e aguardam revisão pela pesquisadora responsável. Os nove rótulos de grupos de usuários são exceção: foram revisados e aprovados pela pesquisadora responsável em 02/10/2026.
 
 ## Stack
 
@@ -23,9 +31,11 @@ O próprio site é exemplo de acessibilidade. Auditado contra os 11 itens críti
 
 ```bash
 npm install
-npm run dev       # http://localhost:5173
-npm run build     # gera dist/
-npm run a11y      # auditoria axe-core (dev server precisa estar rodando)
+npm run dev            # http://localhost:5173
+npm run build          # gera dist/
+npm run a11y           # auditoria axe-core nas oito cenas
+npm run i18n:regress   # regressão de idioma nas trocas de tela
+npm run i18n:validate  # formato bilíngue do dataset
 ```
 
 ## Estrutura
@@ -34,11 +44,12 @@ npm run a11y      # auditoria axe-core (dev server precisa estar rodando)
 - `docs/source/WCAG2_2_Mapeamentos.xlsx` — fonte original do mapeamento
 - `docs/auditoria-a11y.md` — relatório de auditoria de acessibilidade
 - `scripts/a11y.mjs` — script de auditoria automatizada
+- `scripts/i18n-regress.mjs` — regressão de idioma nas trocas de tela
+- `src/i18n/` — dicionários de interface (pt, en)
 - `src/screens/` — três telas (Intro, Quiz, Report)
 
 ## Créditos
 
-Pesquisa de doutorado: **Renata Vinadé** (PUCRS)
-Orientação: **Profa. Dra. Sabrina Marczak** (PUCRS)
-Apoio: Bolsa Renata Vinadé
-Desenvolvimento: Ana Purper
+Ferramenta desenvolvida por **Ana Purper**, bolsista de Iniciação Científica (PIBIC/CNPq), Escola Politécnica — PUCRS.
+
+Baseada no método **Path4All**, pesquisa de mestrado de **Renata Vinadé** (PUCRS), sob orientação da **Profa. Dra. Sabrina Marczak**.
