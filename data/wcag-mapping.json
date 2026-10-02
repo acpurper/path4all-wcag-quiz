@@ -1200,7 +1200,7 @@
         },
         {
           "id": "2.5.5",
-          "nome": "Target Size",
+          "nome": "Target Size (Enhanced)",
           "nivel": "AAA",
           "obrigatoriedade": {
             "pt": "Recomendável",
@@ -1210,7 +1210,7 @@
             "pt": "Tamanho do alvo grande (AAA) para acionamento por toque.",
             "en": "Provide a large target size (AAA) for touch activation."
           },
-          "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/target-size.html",
+          "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html",
           "publicos_atendidos": [
             "visao_limitada",
             "manipulacao_limitada",
