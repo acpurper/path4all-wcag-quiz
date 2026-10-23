@@ -265,9 +265,9 @@ await scenario('(d)', async () => {
   await context.close();
 });
 
-// ---- (e): troca de idioma no relatório atualiza os 9 rótulos sem recarregar ----
+// ---- (e): troca de idioma no relatório atualiza os rótulos de público sem recarregar ----
 await scenario('(e)', async () => {
-  console.log('(e) os 9 rótulos de público acompanham a troca de idioma no relatório');
+  console.log('(e) os rótulos de público acompanham a troca de idioma no relatório');
 
   const esperado = {
     pt: rawData.publicos.map((p) => p.nome.pt),

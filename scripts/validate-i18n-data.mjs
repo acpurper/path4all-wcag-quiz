@@ -101,8 +101,8 @@ for (const categoria of categorias) {
 
 const publicos = mapping.publicos ?? [];
 
-if (publicos.length !== 9) {
-  errors.push(`Esperava 9 públicos, encontrou ${publicos.length}`);
+if (publicos.length !== 10) {
+  errors.push(`Esperava 10 públicos, encontrou ${publicos.length}`);
 }
 
 for (const publico of publicos) {
@@ -116,10 +116,31 @@ for (const publico of publicos) {
   }
 }
 
+// Integridade referencial entre critérios e públicos: todo id citado em
+// publicos_atendidos precisa existir, e todo público precisa ser citado por
+// pelo menos um critério (senão o filtro dele no relatório não tem efeito).
+const publicoIds = new Set(publicos.map((p) => p.id));
+const publicosCitados = new Set();
+for (const categoria of categorias) {
+  for (const criterio of categoria.criterios ?? []) {
+    for (const id of criterio.publicos_atendidos ?? []) {
+      publicosCitados.add(id);
+      if (!publicoIds.has(id)) {
+        errors.push(`Critério ${criterio.id}: público "${id}" não existe em publicos`);
+      }
+    }
+  }
+}
+for (const id of publicoIds) {
+  if (!publicosCitados.has(id)) {
+    errors.push(`Público ${id} não é citado por nenhum critério`);
+  }
+}
+
 if (errors.length > 0) {
   console.error(`Validação falhou com ${errors.length} erro(s):`);
   for (const e of errors) console.error(` - ${e}`);
   process.exit(1);
 }
 
-console.log('Validação ok: 13 categorias, 86 critérios, 9 públicos, shape bilíngue consistente.');
+console.log('Validação ok: 13 categorias, 86 critérios, 10 públicos, shape bilíngue e referências consistentes.');

@@ -163,7 +163,10 @@
             "en": "Meet criterion 1.2.6 — Sign Language (Prerecorded) — per WCAG guidelines and related standards."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/sign-language-prerecorded.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_audicao",
+            "audicao_limitada"
+          ]
         },
         {
           "id": "1.2.7",
@@ -178,7 +181,11 @@
             "en": "Meet criterion 1.2.7 — Extended Audio Description (Prerecorded) — per WCAG guidelines and related standards."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/extended-audio-description-prerecorded.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "1.2.8",
@@ -193,7 +200,13 @@
             "en": "Meet criterion 1.2.8 — Media Alternative (Prerecorded) — per WCAG guidelines and related standards."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/media-alternative-prerecorded.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "1.2.9",
@@ -208,7 +221,30 @@
             "en": "Meet criterion 1.2.9 — Audio-only (Live) — per WCAG guidelines and related standards."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/audio-only-live.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_audicao",
+            "audicao_limitada",
+            "cognitivo_limitado"
+          ]
+        },
+        {
+          "id": "1.4.7",
+          "nome": "Low or No Background Audio",
+          "nivel": "AAA",
+          "obrigatoriedade": {
+            "pt": "Recomendável",
+            "en": "Recommended"
+          },
+          "requisito": {
+            "pt": "Fornecer áudio de fundo baixo/sem áudio para facilitar a audição do conteúdo principal.",
+            "en": "Provide low or no background audio to make the primary audio content easier to hear."
+          },
+          "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/low-or-no-background-audio.html",
+          "publicos_atendidos": [
+            "sem_audicao",
+            "audicao_limitada",
+            "cognitivo_limitado"
+          ]
         }
       ]
     },
@@ -281,6 +317,7 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "sem_percepcao_cor",
             "sem_audicao",
             "audicao_limitada",
             "cognitivo_limitado"
@@ -301,7 +338,8 @@
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/orientation.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
-            "alcance_forca_limitados"
+            "alcance_forca_limitados",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -318,9 +356,7 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html",
           "publicos_atendidos": [
-            "sem_visao",
-            "visao_limitada",
-            "cognitivo_limitado"
+            "visao_limitada"
           ]
         },
         {
@@ -337,9 +373,7 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/identify-purpose.html",
           "publicos_atendidos": [
-            "sem_visao",
-            "visao_limitada",
-            "cognitivo_limitado"
+            "visao_limitada"
           ]
         }
       ]
@@ -413,7 +447,8 @@
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
           "publicos_atendidos": [
             "visao_limitada",
-            "sem_percepcao_cor"
+            "sem_percepcao_cor",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -447,7 +482,9 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html",
           "publicos_atendidos": [
+            "sem_visao",
             "visao_limitada",
+            "sem_percepcao_cor",
             "cognitivo_limitado"
           ]
         },
@@ -464,22 +501,11 @@
             "en": "Provide enhanced contrast (7:1 for normal text; 4.5:1 for large text)."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html",
-          "publicos_atendidos": []
-        },
-        {
-          "id": "1.4.7",
-          "nome": "Low or No Background Audio",
-          "nivel": "AAA",
-          "obrigatoriedade": {
-            "pt": "Recomendável",
-            "en": "Recommended"
-          },
-          "requisito": {
-            "pt": "Fornecer áudio de fundo baixo/sem áudio para facilitar a audição do conteúdo principal.",
-            "en": "Provide low or no background audio to make the primary audio content easier to hear."
-          },
-          "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/low-or-no-background-audio.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "visao_limitada",
+            "sem_percepcao_cor",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "1.4.8",
@@ -494,7 +520,11 @@
             "en": "Offer control over line width, spacing, and justification to support reading."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "visao_limitada",
+            "sem_percepcao_cor",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "1.4.9",
@@ -509,7 +539,12 @@
             "en": "Avoid images of text entirely, except for logotypes."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_percepcao_cor",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "1.4.10",
@@ -525,7 +560,10 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
           "publicos_atendidos": [
-            "visao_limitada"
+            "visao_limitada",
+            "manipulacao_limitada",
+            "alcance_forca_limitados",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -543,7 +581,8 @@
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
           "publicos_atendidos": [
             "visao_limitada",
-            "sem_percepcao_cor"
+            "sem_percepcao_cor",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -578,9 +617,7 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html",
           "publicos_atendidos": [
-            "sem_visao",
             "visao_limitada",
-            "manipulacao_limitada",
             "cognitivo_limitado"
           ]
         }
@@ -617,8 +654,8 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
-            "manipulacao_limitada",
-            "cognitivo_limitado"
+            "sem_fala",
+            "manipulacao_limitada"
           ]
         },
         {
@@ -637,6 +674,7 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "sem_fala",
             "manipulacao_limitada"
           ]
         },
@@ -653,7 +691,12 @@
             "en": "Ensure full keyboard operability with no exceptions."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard-no-exception.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_fala",
+            "manipulacao_limitada"
+          ]
         },
         {
           "id": "2.1.4",
@@ -669,7 +712,9 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html",
           "publicos_atendidos": [
-            "sem_visao"
+            "manipulacao_limitada",
+            "alcance_forca_limitados",
+            "cognitivo_limitado"
           ]
         }
       ]
@@ -705,6 +750,8 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -723,6 +770,11 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html",
           "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
+            "manipulacao_limitada",
             "cognitivo_limitado"
           ]
         },
@@ -739,7 +791,14 @@
             "en": "Do not impose a time limit on reading or operation unless it is essential."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/no-timing.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "2.2.4",
@@ -754,7 +813,14 @@
             "en": "Allow the user to postpone and control interruptions (e.g., notifications)."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/interruptions.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "2.2.5",
@@ -769,7 +835,14 @@
             "en": "Preserve entered data when re-authenticating to avoid loss of information."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/re-authenticating.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "2.2.6",
@@ -785,6 +858,10 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/timeouts.html",
           "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -819,7 +896,9 @@
             "en": "Avoid content with more than three flashes per second, or below the safe threshold."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sensivel_gatilhos_convulsao"
+          ]
         },
         {
           "id": "2.3.2",
@@ -834,7 +913,10 @@
             "en": "There must be no flashing capable of triggering seizures, even below the general threshold."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sensivel_gatilhos_convulsao",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "2.3.3",
@@ -850,6 +932,7 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
           "publicos_atendidos": [
+            "sensivel_gatilhos_convulsao",
             "cognitivo_limitado"
           ]
         }
@@ -886,6 +969,7 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "sem_fala",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -946,6 +1030,7 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "sem_fala",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -966,6 +1051,7 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "sem_fala",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -986,6 +1072,8 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "sem_audicao",
+            "sem_fala",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -1004,7 +1092,9 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html",
           "publicos_atendidos": [
+            "sem_visao",
             "visao_limitada",
+            "sem_fala",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -1022,7 +1112,13 @@
             "en": "Show the user's location within the site (e.g., a breadcrumb trail)."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/location.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_fala",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "2.4.9",
@@ -1037,7 +1133,11 @@
             "en": "The link text alone describes the link's destination."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-link-only.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "2.4.10",
@@ -1052,7 +1152,14 @@
             "en": "Provide section headings to organize lengthy content."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/section-headings.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "sem_fala",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "2.4.11",
@@ -1069,7 +1176,11 @@
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html",
           "publicos_atendidos": [
             "sem_visao",
-            "visao_limitada"
+            "visao_limitada",
+            "sem_audicao",
+            "sem_fala",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -1087,7 +1198,11 @@
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced.html",
           "publicos_atendidos": [
             "sem_visao",
-            "visao_limitada"
+            "visao_limitada",
+            "sem_audicao",
+            "sem_fala",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -1104,7 +1219,9 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html",
           "publicos_atendidos": [
-            "visao_limitada"
+            "visao_limitada",
+            "sem_percepcao_cor",
+            "cognitivo_limitado"
           ]
         }
       ]
@@ -1139,7 +1256,8 @@
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
-            "alcance_forca_limitados"
+            "alcance_forca_limitados",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -1156,8 +1274,10 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation.html",
           "publicos_atendidos": [
+            "visao_limitada",
             "manipulacao_limitada",
-            "alcance_forca_limitados"
+            "alcance_forca_limitados",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -1174,8 +1294,8 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
           "publicos_atendidos": [
-            "sem_visao",
-            "visao_limitada",
+            "manipulacao_limitada",
+            "alcance_forca_limitados",
             "cognitivo_limitado"
           ]
         },
@@ -1193,6 +1313,8 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html",
           "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
             "manipulacao_limitada",
             "alcance_forca_limitados",
             "cognitivo_limitado"
@@ -1214,7 +1336,8 @@
           "publicos_atendidos": [
             "visao_limitada",
             "manipulacao_limitada",
-            "alcance_forca_limitados"
+            "alcance_forca_limitados",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -1231,8 +1354,11 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/concurrent-input-mechanisms.html",
           "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
             "manipulacao_limitada",
-            "alcance_forca_limitados"
+            "alcance_forca_limitados",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -1250,7 +1376,8 @@
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
           "publicos_atendidos": [
             "manipulacao_limitada",
-            "alcance_forca_limitados"
+            "alcance_forca_limitados",
+            "cognitivo_limitado"
           ]
         },
         {
@@ -1269,7 +1396,8 @@
           "publicos_atendidos": [
             "visao_limitada",
             "manipulacao_limitada",
-            "alcance_forca_limitados"
+            "alcance_forca_limitados",
+            "cognitivo_limitado"
           ]
         }
       ]
@@ -1344,7 +1472,13 @@
             "en": "Provide definitions for unusual words or idioms."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/unusual-words.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "3.1.4",
@@ -1359,7 +1493,13 @@
             "en": "Provide an explanation for abbreviations at their first occurrence."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/abbreviations.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "3.1.5",
@@ -1374,7 +1514,13 @@
             "en": "Offer a simpler alternative version of the content when the reading level is high."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/reading-level.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_audicao",
+            "audicao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "3.1.6",
@@ -1389,7 +1535,11 @@
             "en": "Provide pronunciation information when needed for understanding."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/pronunciation.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "cognitivo_limitado"
+          ]
         }
       ]
     },
@@ -1444,6 +1594,7 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "manipulacao_limitada",
             "cognitivo_limitado"
           ]
         },
@@ -1482,7 +1633,6 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
-            "manipulacao_limitada",
             "cognitivo_limitado"
           ]
         },
@@ -1499,7 +1649,12 @@
             "en": "Let the user request changes instead of having them occur automatically."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/change-on-request.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "3.2.6",
@@ -1515,6 +1670,12 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html",
           "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_percepcao_cor",
+            "sem_audicao",
+            "audicao_limitada",
+            "manipulacao_limitada",
             "cognitivo_limitado"
           ]
         }
@@ -1569,7 +1730,10 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html",
           "publicos_atendidos": [
+            "sem_visao",
             "visao_limitada",
+            "sem_fala",
+            "manipulacao_limitada",
             "cognitivo_limitado"
           ]
         },
@@ -1589,6 +1753,7 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "sem_fala",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -1609,9 +1774,7 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
-            "sem_percepcao_cor",
-            "sem_audicao",
-            "audicao_limitada",
+            "sem_fala",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -1629,7 +1792,14 @@
             "en": "Provide contextual help and supporting documentation."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/help.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_percepcao_cor",
+            "sem_fala",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "3.3.6",
@@ -1644,7 +1814,14 @@
             "en": "Prevent errors across all inputs (AAA), with robust validation."
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-all.html",
-          "publicos_atendidos": []
+          "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_percepcao_cor",
+            "sem_fala",
+            "manipulacao_limitada",
+            "cognitivo_limitado"
+          ]
         },
         {
           "id": "3.3.7",
@@ -1660,6 +1837,10 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html",
           "publicos_atendidos": [
+            "sem_visao",
+            "visao_limitada",
+            "sem_percepcao_cor",
+            "sem_fala",
             "manipulacao_limitada",
             "cognitivo_limitado"
           ]
@@ -1678,8 +1859,6 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
           "publicos_atendidos": [
-            "sem_visao",
-            "visao_limitada",
             "cognitivo_limitado"
           ]
         },
@@ -1697,8 +1876,6 @@
           },
           "link_w3c": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced.html",
           "publicos_atendidos": [
-            "sem_visao",
-            "visao_limitada",
             "cognitivo_limitado"
           ]
         }
@@ -1735,8 +1912,7 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
-            "manipulacao_limitada",
-            "cognitivo_limitado"
+            "manipulacao_limitada"
           ]
         },
         {
@@ -1755,7 +1931,13 @@
           "publicos_atendidos": [
             "sem_visao",
             "visao_limitada",
+            "sem_percepcao_cor",
+            "sem_audicao",
+            "audicao_limitada",
+            "sem_fala",
             "manipulacao_limitada",
+            "alcance_forca_limitados",
+            "sensivel_gatilhos_convulsao",
             "cognitivo_limitado"
           ]
         }
@@ -1802,7 +1984,7 @@
       "id": "sem_fala",
       "nome": {
         "pt": "Sem fala",
-        "en": "Unable to speak"
+        "en": "Without vocal capability"
       }
     },
     {
@@ -1817,6 +1999,13 @@
       "nome": {
         "pt": "Alcance e força limitados",
         "en": "Limited reach and strength"
+      }
+    },
+    {
+      "id": "sensivel_gatilhos_convulsao",
+      "nome": {
+        "pt": "Sensível a gatilhos de convulsão",
+        "en": "Photosensitive seizure triggers"
       }
     },
     {
