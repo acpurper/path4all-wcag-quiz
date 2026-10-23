@@ -18,7 +18,7 @@ A verificação automatizada cobre o que o axe-core consegue detectar e não ate
 
 A interface está disponível em português e em inglês. O idioma é alternado pelo seletor no topo da página, sem recarregar, e também pode vir na URL: `?lang=pt` ou `?lang=en` — útil para compartilhar um link já no idioma desejado. A escolha persiste entre visitas e o atributo `lang` do documento acompanha a troca. Na dúvida, vale primeiro o parâmetro da URL; sem ele, o idioma gravado na visita anterior; sem nada gravado, o idioma do navegador; e, em último caso, português.
 
-Os textos de interface ficam nos dicionários tipados em `src/i18n/`; os dados do mapeamento WCAG (categorias, perguntas, princípios, requisitos e públicos) são bilíngues em `data/wcag-mapping.json`. As traduções do dataset para o inglês são provisórias e aguardam revisão pela pesquisadora responsável. Os nove rótulos de grupos de usuários são exceção: foram revisados e aprovados pela pesquisadora responsável em 02/10/2026.
+Os textos de interface ficam nos dicionários tipados em `src/i18n/`; os dados do mapeamento WCAG (categorias, perguntas, princípios, requisitos e públicos) são bilíngues em `data/wcag-mapping.json`. As traduções do dataset para o inglês são provisórias e aguardam revisão pela pesquisadora responsável. Os rótulos dos grupos de usuários são exceção: foram revisados e aprovados pela pesquisadora responsável em 02/10/2026, com o rótulo em inglês de `sem_fala` alterado em 23/10/2026. O décimo grupo, `sensivel_gatilhos_convulsao`, incluído em 23/10/2026, ainda aguarda revisão dos rótulos.
 
 ## Stack
 
@@ -41,7 +41,8 @@ npm run i18n:validate  # formato bilíngue do dataset
 ## Estrutura
 
 - `data/wcag-mapping.json` — mapeamento WCAG 2.2 gerado a partir do XLSX da Renata
-- `docs/source/WCAG2_2_Mapeamentos.xlsx` — fonte original do mapeamento
+- `docs/source/WCAG2_2_Mapeamentos.xlsx` — fonte original do mapeamento (categorias, perguntas, requisitos)
+- `docs/source/WCAG2_2_Mapping.xlsx` — mapeamento revisado (23/10/2026), fonte atual dos grupos de usuários por critério
 - `docs/auditoria-a11y.md` — relatório de auditoria de acessibilidade
 - `scripts/a11y.mjs` — script de auditoria automatizada
 - `scripts/i18n-regress.mjs` — regressão de idioma nas trocas de tela
