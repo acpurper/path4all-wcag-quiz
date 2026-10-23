@@ -1,15 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import type { State, Answer } from '../types/wcag';
+import type { Dict } from '../i18n/index';
 import { categorias, TOTAL_QUESTIONS } from '../lib/wcag';
 import { ProgressBar } from '../components/ProgressBar';
+import { loc } from '../lib/localized';
 
 interface Props {
+  t: Dict;
   state: State;
   dispatch: (action: import('../types/wcag').Action) => void;
 }
 
-export function QuizScreen({ state, dispatch }: Props) {
-  const { currentQuestionIndex, answers } = state;
+export function QuizScreen({ t, state, dispatch }: Props) {
+  const { currentQuestionIndex, answers, lang } = state;
   const categoria = categorias[currentQuestionIndex];
   const headingRef = useRef<HTMLHeadingElement>(null);
   const isFirstRender = useRef(true);
@@ -33,11 +36,11 @@ export function QuizScreen({ state, dispatch }: Props) {
       lastAnnouncedIndex.current !== currentQuestionIndex
     ) {
       setAnnouncement(
-        `Pergunta ${currentQuestionIndex + 1} de ${TOTAL_QUESTIONS}: ${categoria.pergunta}`,
+        t.a11y.anuncio(currentQuestionIndex + 1, TOTAL_QUESTIONS, loc(categoria.pergunta, lang)),
       );
     }
     lastAnnouncedIndex.current = currentQuestionIndex;
-  }, [currentQuestionIndex, categoria.pergunta]);
+  }, [currentQuestionIndex, categoria.pergunta, t]);
 
   // Esc key: BACK — scoped to QuizScreen mount lifetime only
   useEffect(() => {
@@ -75,11 +78,11 @@ export function QuizScreen({ state, dispatch }: Props) {
 
       <div className="max-w-2xl w-full">
         <div className="mb-8">
-          <ProgressBar current={displayNumber} total={TOTAL_QUESTIONS} />
+          <ProgressBar t={t} current={displayNumber} total={TOTAL_QUESTIONS} />
         </div>
 
         <p className="text-sm font-medium text-[#2D3F2D] uppercase tracking-wide mb-2">
-          {categoria.nome}
+          {loc(categoria.nome, lang)}
         </p>
 
         <h1
@@ -88,31 +91,28 @@ export function QuizScreen({ state, dispatch }: Props) {
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           className="text-3xl sm:text-4xl font-medium text-[#1A1A1A] mb-10 leading-tight"
         >
-          {categoria.pergunta}
+          {loc(categoria.pergunta, lang)}
         </h1>
 
         <div
           role="group"
-          aria-label="Escolha uma resposta"
+          aria-label={t.a11y.grupoRespostas}
           className="flex flex-col gap-3 mb-10"
         >
           <AnswerButton
-            label="Sim"
-            description="Meu sistema terá esse tipo de conteúdo ou funcionalidade"
+            t={t}
             value="sim"
             currentAnswer={currentAnswer}
             onClick={() => handleAnswer('sim')}
           />
           <AnswerButton
-            label="Não"
-            description="Meu sistema não terá esse tipo de conteúdo ou funcionalidade"
+            t={t}
             value="nao"
             currentAnswer={currentAnswer}
             onClick={() => handleAnswer('nao')}
           />
           <AnswerButton
-            label="Não sei"
-            description="Ainda não tenho certeza se haverá esse conteúdo ou funcionalidade"
+            t={t}
             value="nao_sei"
             currentAnswer={currentAnswer}
             onClick={() => handleAnswer('nao_sei')}
@@ -123,9 +123,9 @@ export function QuizScreen({ state, dispatch }: Props) {
           <button
             onClick={handleBack}
             className="min-h-[44px] px-6 py-2 text-[#2D3F2D] text-sm font-medium rounded border border-[#2D3F2D]/30 hover:border-[#2D3F2D] hover:bg-[#2D3F2D]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-2 transition-colors duration-150 flex items-center gap-2"
-            aria-label="Voltar para a pergunta anterior"
+            aria-label={t.a11y.voltarAriaLabel}
           >
-            <span aria-hidden="true">←</span> Voltar
+            <span aria-hidden="true">←</span> {t.quiz.btnVoltar}
           </button>
         )}
       </div>
@@ -134,15 +134,21 @@ export function QuizScreen({ state, dispatch }: Props) {
 }
 
 interface AnswerButtonProps {
-  label: string;
-  description: string;
+  t: Dict;
   value: Answer;
   currentAnswer: Answer | undefined;
   onClick: () => void;
 }
 
-function AnswerButton({ label, description, value, currentAnswer, onClick }: AnswerButtonProps) {
+function AnswerButton({ t, value, currentAnswer, onClick }: AnswerButtonProps) {
   const isSelected = currentAnswer === value;
+
+  const labels: Record<Answer, { label: string; description: string }> = {
+    sim: { label: t.quiz.answerSimLabel, description: t.quiz.answerSimDesc },
+    nao: { label: t.quiz.answerNaoLabel, description: t.quiz.answerNaoDesc },
+    nao_sei: { label: t.quiz.answerNaoSeiLabel, description: t.quiz.answerNaoSeiDesc },
+  };
+  const { label, description } = labels[value];
 
   return (
     <button

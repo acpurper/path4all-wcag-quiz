@@ -1,18 +1,30 @@
-import type { State, Criterio } from '../types/wcag';
+import type { State, Criterio, Localized } from '../types/wcag';
+import type { Dict, Lang } from '../i18n/index';
 import { categorias, publicos, deveDestacar } from '../lib/wcag';
+import { loc } from '../lib/localized';
 
 interface Props {
+  t: Dict;
   state: State;
   dispatch: (action: import('../types/wcag').Action) => void;
 }
 
 const POUR_ORDER = ['Perceptível', 'Operável', 'Compreensível', 'Robusto'] as const;
 
-// Built once at module level — publicos array is static
+const POUR_LABELS: Record<(typeof POUR_ORDER)[number], Localized> = {
+  Perceptível: { pt: 'Perceptível', en: 'Perceivable' },
+  Operável: { pt: 'Operável', en: 'Operable' },
+  Compreensível: { pt: 'Compreensível', en: 'Understandable' },
+  Robusto: { pt: 'Robusto', en: 'Robust' },
+};
+
+// Built once at module level — publicos array is static. Guarda o par { pt, en }
+// sem resolver o idioma: loc() só é chamado na renderização, senão o rótulo
+// ficaria congelado no idioma vigente no import do módulo.
 const publicoNomeMap = new Map(publicos.map((p) => [p.id, p.nome]));
 
-export function ReportScreen({ state, dispatch }: Props) {
-  const { answers, implementado, publicosAtivos } = state;
+export function ReportScreen({ t, state, dispatch }: Props) {
+  const { answers, implementado, publicosAtivos, lang } = state;
 
   const applicableCategories = categorias.filter(
     (cat) => answers[cat.id] === 'sim' || answers[cat.id] === 'nao_sei',
@@ -21,24 +33,24 @@ export function ReportScreen({ state, dispatch }: Props) {
   const byPrinciple: Partial<Record<string, Criterio[]>> = {};
   for (const cat of applicableCategories) {
     for (const criterio of cat.criterios) {
-      const existing = byPrinciple[cat.principio];
+      const existing = byPrinciple[cat.principio.pt];
       if (existing) {
         existing.push(criterio);
       } else {
-        byPrinciple[cat.principio] = [criterio];
+        byPrinciple[cat.principio.pt] = [criterio];
       }
     }
   }
 
   const allCriterios = applicableCategories.flatMap((cat) => cat.criterios);
   const totalObrigatorio = allCriterios.filter(
-    (c) => c.obrigatoriedade === 'Obrigatório',
+    (c) => c.obrigatoriedade.pt === 'Obrigatório',
   ).length;
   const totalRecomendavel = allCriterios.filter(
-    (c) => c.obrigatoriedade === 'Recomendável',
+    (c) => c.obrigatoriedade.pt === 'Recomendável',
   ).length;
   const obrigatoriosImplementados = allCriterios.filter(
-    (c) => c.obrigatoriedade === 'Obrigatório' && implementado[c.id],
+    (c) => c.obrigatoriedade.pt === 'Obrigatório' && implementado[c.id],
   ).length;
 
   function expandirTodos() {
@@ -61,16 +73,17 @@ export function ReportScreen({ state, dispatch }: Props) {
           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           className="text-4xl sm:text-5xl font-medium text-[#2D3F2D] mb-8 leading-tight"
         >
-          Relatório de critérios WCAG 2.2 aplicáveis
+          {t.report.heading}
         </h1>
 
         {/* Stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          <Stat label="Categorias aplicáveis" value={applicableCategories.length} />
-          <Stat label="Obrigatórios" value={totalObrigatorio} />
-          <Stat label="Recomendáveis" value={totalRecomendavel} />
+          <Stat t={t} label={t.report.statCategorias} value={applicableCategories.length} />
+          <Stat t={t} label={t.report.statObrigatorios} value={totalObrigatorio} />
+          <Stat t={t} label={t.report.statRecomendaveis} value={totalRecomendavel} />
           <Stat
-            label="Obrigatórios implementados"
+            t={t}
+            label={t.report.statImplementados}
             value={`${obrigatoriosImplementados} / ${totalObrigatorio}`}
           />
         </div>
@@ -81,25 +94,25 @@ export function ReportScreen({ state, dispatch }: Props) {
             onClick={() => window.print()}
             className="min-h-[44px] px-5 py-2 bg-[#2D3F2D] text-white rounded text-sm font-medium hover:bg-[#3a5230] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-2 transition-colors duration-150"
           >
-            Exportar PDF
+            {t.report.btnExportarPdf}
           </button>
           <button
             onClick={() => dispatch({ type: 'RESTART' })}
             className="min-h-[44px] px-5 py-2 border-2 border-[#2D3F2D] text-[#2D3F2D] rounded text-sm font-medium hover:bg-[#2D3F2D]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-2 transition-colors duration-150"
           >
-            Refazer diagnóstico
+            {t.report.btnRefazer}
           </button>
           <button
             onClick={expandirTodos}
             className="min-h-[44px] px-5 py-2 border border-[#1A1A1A]/20 text-[#5C5C5C] rounded text-sm font-medium hover:border-[#1A1A1A]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-2 transition-colors duration-150"
           >
-            Expandir todos os detalhes
+            {t.report.btnExpandir}
           </button>
           <button
             onClick={recolherTodos}
             className="min-h-[44px] px-5 py-2 border border-[#1A1A1A]/20 text-[#5C5C5C] rounded text-sm font-medium hover:border-[#1A1A1A]/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-2 transition-colors duration-150"
           >
-            Recolher todos os detalhes
+            {t.report.btnRecolher}
           </button>
         </div>
 
@@ -108,11 +121,10 @@ export function ReportScreen({ state, dispatch }: Props) {
           <legend
             className="text-sm font-semibold text-[#1A1A1A] px-2"
           >
-            Filtrar por público-alvo (opcional)
+            {t.report.fieldsetLegend}
           </legend>
           <p className="text-xs text-[#5C5C5C] mb-4 leading-relaxed">
-            Selecione um ou mais públicos para destacar critérios especialmente
-            relevantes. O destaque não esconde os demais critérios.
+            {t.report.fieldsetDesc}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6 mb-4">
             {publicos.map((publico) => (
@@ -130,7 +142,7 @@ export function ReportScreen({ state, dispatch }: Props) {
                   htmlFor={`pub-${publico.id}`}
                   className="text-sm text-[#1A1A1A] cursor-pointer select-none"
                 >
-                  {publico.nome}
+                  {loc(publico.nome, lang)}
                 </label>
               </div>
             ))}
@@ -140,7 +152,7 @@ export function ReportScreen({ state, dispatch }: Props) {
               onClick={() => dispatch({ type: 'CLEAR_PUBLICOS' })}
               className="min-h-[44px] px-4 py-2 text-sm text-[#2D3F2D] border border-[#2D3F2D] rounded font-medium hover:bg-[#2D3F2D]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-2 transition-colors duration-150"
             >
-              Limpar filtros
+              {t.report.btnLimparFiltros}
             </button>
           )}
         </fieldset>
@@ -155,12 +167,14 @@ export function ReportScreen({ state, dispatch }: Props) {
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                 className="text-2xl font-medium text-[#2D3F2D] mb-4 pb-2 border-b border-[#2D3F2D]/20"
               >
-                {principio}
+                {loc(POUR_LABELS[principio], lang)}
               </h2>
               <ul className="flex flex-col gap-4">
                 {criterios.map((criterio) => (
                   <CriterioItem
                     key={criterio.id}
+                    t={t}
+                    lang={lang}
                     criterio={criterio}
                     isImplementado={!!implementado[criterio.id]}
                     publicosAtivos={publicosAtivos}
@@ -179,6 +193,7 @@ export function ReportScreen({ state, dispatch }: Props) {
 }
 
 interface StatProps {
+  t: Dict;
   label: string;
   value: string | number;
 }
@@ -193,23 +208,31 @@ function Stat({ label, value }: StatProps) {
 }
 
 interface CriterioItemProps {
+  t: Dict;
+  lang: Lang;
   criterio: Criterio;
   isImplementado: boolean;
   publicosAtivos: string[];
   onToggle: () => void;
 }
 
-function CriterioItem({ criterio, isImplementado, publicosAtivos, onToggle }: CriterioItemProps) {
+function CriterioItem({ t, lang, criterio, isImplementado, publicosAtivos, onToggle }: CriterioItemProps) {
   const destacado = deveDestacar(criterio, publicosAtivos);
 
+  // O id é a chave estável para agrupar e comparar; o nome serve só para exibir.
   const publicoNomes = criterio.publicos_atendidos
-    .map((id) => publicoNomeMap.get(id) ?? id)
-    .join(', ');
+    .map((id) => {
+      const nome = publicoNomeMap.get(id);
+      return nome ? loc(nome, lang) : id;
+    })
+    // Ponto e vírgula: os rótulos podem conter vírgula, o que torna a lista
+    // ambígua se o separador também for vírgula.
+    .join('; ');
 
   const personaDescricao =
     publicoNomes.length > 0
       ? publicoNomes
-      : 'uma ou mais necessidades de acessibilidade';
+      : t.report.personaFallback;
 
   return (
     <li
@@ -231,16 +254,16 @@ function CriterioItem({ criterio, isImplementado, publicosAtivos, onToggle }: Cr
           <span className="font-mono text-xs text-[#5C5C5C] shrink-0">
             {criterio.id}
           </span>
-          <span className="font-semibold text-sm text-[#1A1A1A] break-words min-w-0">
+          <h3 className="font-semibold text-sm text-[#1A1A1A] break-words min-w-0">
             {criterio.nome}
-          </span>
+          </h3>
         </div>
         <div className="flex flex-wrap gap-2">
-          <NivelBadge nivel={criterio.nivel} />
-          <ObrigBadge obrigatoriedade={criterio.obrigatoriedade} />
+          <NivelBadge t={t} nivel={criterio.nivel} />
+          <ObrigBadge obrigatoriedade={criterio.obrigatoriedade} lang={lang} />
           {destacado && (
             <span className="text-xs font-medium text-[#2D3F2D] break-words min-w-0">
-              Relevante para: {publicoNomes}
+              {t.report.relevantePara(publicoNomes)}
             </span>
           )}
         </div>
@@ -248,13 +271,13 @@ function CriterioItem({ criterio, isImplementado, publicosAtivos, onToggle }: Cr
 
       {/* Requirement text */}
       <p className="text-sm text-[#5C5C5C] leading-relaxed mb-2 break-words [overflow-wrap:anywhere]">
-        {criterio.requisito}
+        {loc(criterio.requisito, lang)}
       </p>
 
       {/* No público mapping notice */}
       {criterio.publicos_atendidos.length === 0 && (
         <p className="text-xs text-[#5C5C5C] mb-2">
-          Sem mapeamento específico de público no estudo.
+          {t.report.semMapeamento}
         </p>
       )}
 
@@ -266,7 +289,7 @@ function CriterioItem({ criterio, isImplementado, publicosAtivos, onToggle }: Cr
           rel="noopener noreferrer"
           className="text-xs text-[#2D3F2D] underline underline-offset-2 break-all hover:text-[#3a5230] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2D3F2D] focus-visible:ring-offset-1 rounded"
         >
-          Ver documentação W3C
+          {t.report.linkW3C}
         </a>
         <div className="flex items-center gap-2">
           <input
@@ -280,7 +303,7 @@ function CriterioItem({ criterio, isImplementado, publicosAtivos, onToggle }: Cr
             htmlFor={`impl-${criterio.id}`}
             className="text-xs text-[#5C5C5C] cursor-pointer select-none"
           >
-            Implementado
+            {t.report.labelImplementado}
           </label>
         </div>
       </div>
@@ -290,49 +313,44 @@ function CriterioItem({ criterio, isImplementado, publicosAtivos, onToggle }: Cr
         <summary
           className="cursor-pointer px-4 py-2 text-xs font-medium text-[#2D3F2D] hover:bg-[#2D3F2D]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#2D3F2D] transition-colors duration-150 select-none"
         >
-          Ver como User Story + BDD
+          {t.report.summaryBdd}
         </summary>
         <div className="px-4 py-3 border-t border-[#1A1A1A]/8 text-sm space-y-3">
           <p className="text-xs text-[#5C5C5C] italic leading-relaxed">
-            Esqueleto inicial. Adapte a persona, contexto e cenário ao seu
-            projeto antes de usar.
+            {t.bdd.introItalico}
           </p>
 
           <div>
             <h4 className="text-xs font-semibold text-[#5C5C5C] uppercase tracking-wide mb-1">
-              Persona
+              {t.bdd.headingPersona}
             </h4>
             <p className="text-[#5C5C5C]">
-              Como pessoa com {personaDescricao}, usando o sistema.
+              {t.bdd.persona(personaDescricao)}
             </p>
           </div>
 
           <div>
             <h4 className="text-xs font-semibold text-[#5C5C5C] uppercase tracking-wide mb-1">
-              User Story
+              {t.bdd.headingUserStory}
             </h4>
             <p className="text-[#5C5C5C]">
-              Eu quero que o critério {criterio.id} — {criterio.nome} seja
-              atendido, para que eu possa interagir com o sistema sem barreiras.
+              {t.bdd.userStory(criterio.id, criterio.nome)}
             </p>
           </div>
 
           <div>
             <h4 className="text-xs font-semibold text-[#5C5C5C] uppercase tracking-wide mb-1">
-              Cenário (BDD)
+              {t.bdd.headingCenario}
             </h4>
             <p className="text-[#5C5C5C] leading-relaxed break-words [overflow-wrap:anywhere]">
-              Dado que o sistema apresenta um elemento ou comportamento
-              abrangido por {criterio.id};<br />
-              Quando o usuário tentar interagir, perceber ou navegar por ele;<br />
-              Então o sistema deve atender ao requisito:{' '}
-              <em>"{criterio.requisito}"</em>
+              {t.bdd.cenarioA(criterio.id)}<br />
+              {t.bdd.cenarioB}<br />
+              {t.bdd.cenarioCPre}<em>"{loc(criterio.requisito, lang)}"</em>
             </p>
           </div>
 
           <p className="text-xs text-[#5C5C5C] pt-1 border-t border-[#1A1A1A]/8">
-            Estrutura baseada no método Path4All (Vinadé, PUCRS). Adapte ao
-            escopo do seu projeto.
+            {t.bdd.rodape}
           </p>
         </div>
       </details>
@@ -341,23 +359,25 @@ function CriterioItem({ criterio, isImplementado, publicosAtivos, onToggle }: Cr
 }
 
 interface NivelBadgeProps {
+  t: Dict;
   nivel: 'A' | 'AA' | 'AAA';
 }
 
-function NivelBadge({ nivel }: NivelBadgeProps) {
+function NivelBadge({ t, nivel }: NivelBadgeProps) {
   return (
     <span className="text-xs px-1.5 py-0.5 rounded border border-[#1A1A1A]/25 text-[#5C5C5C] font-mono shrink-0">
-      Nível {nivel}
+      {t.report.nivelLabel(nivel)}
     </span>
   );
 }
 
 interface ObrigBadgeProps {
-  obrigatoriedade: 'Obrigatório' | 'Recomendável';
+  obrigatoriedade: Criterio['obrigatoriedade'];
+  lang: Lang;
 }
 
-function ObrigBadge({ obrigatoriedade }: ObrigBadgeProps) {
-  const isObrig = obrigatoriedade === 'Obrigatório';
+function ObrigBadge({ obrigatoriedade, lang }: ObrigBadgeProps) {
+  const isObrig = obrigatoriedade.pt === 'Obrigatório';
   return (
     <span
       className={[
@@ -367,7 +387,7 @@ function ObrigBadge({ obrigatoriedade }: ObrigBadgeProps) {
           : 'border border-[#1A1A1A]/25 text-[#5C5C5C]',
       ].join(' ')}
     >
-      {obrigatoriedade}
+      {loc(obrigatoriedade, lang)}
     </span>
   );
 }
